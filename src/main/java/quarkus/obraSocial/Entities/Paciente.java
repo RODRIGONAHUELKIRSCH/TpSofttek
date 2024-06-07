@@ -10,10 +10,6 @@ import jakarta.persistence.Id;
 @Entity
 public class Paciente extends PanacheEntity{
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idespecialista",unique=true,nullable=false)
-	Long idpaciente;
 	
 	@Column(name="Nombre",nullable=false)
 	String Nombre;
@@ -26,14 +22,6 @@ public class Paciente extends PanacheEntity{
 	
 	@Column(name="Password",unique=true,nullable=false)
 	String Password;
-
-	public Long getIdpaciente() {
-		return idpaciente;
-	}
-
-	public void setIdpaciente(Long idpaciente) {
-		this.idpaciente = idpaciente;
-	}
 
 	public String getNombre() {
 		return Nombre;

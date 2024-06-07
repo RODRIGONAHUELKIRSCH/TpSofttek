@@ -6,37 +6,36 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Medico extends PanacheEntity {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idespecialista",unique=true,nullable=false)
-	Long idespecialista;
+	
+	//LE AGREGUE EL ENCAPSULAMIENTO PRIVATE Q NO TENIA
 	
 	@Column(name="Nombre",nullable=false)
-	String Nombre;
+	private String Nombre;
 
 	@Column(name="Apellido",nullable=false)
-	String Apellido;
+	private String Apellido;
 	
 	@Column(name="Email",unique=true,nullable=false)
-	String Email;
+	private String Email;
 	
 	@Column(name="Password",unique=true,nullable=false)
-	String Password;
+	private String Password;
 	
-	public Long getIdespecialista() {
-		return idespecialista;
-	}
-
-	public void setIdespecialista(Long idespecialista) {
-		this.idespecialista = idespecialista;
-	}
+	@Column(name="foto",unique=true,nullable=false)
+	private String foto;
+	
+    @Column(name="idEspecialidad", nullable=false)
+    private Long idEspecialidad; 
+	
 
 	public String getNombre() {
-		return Nombre;
+		return this.Nombre;
 	}
 
 	public void setNombre(String nombre) {
@@ -66,4 +65,20 @@ public class Medico extends PanacheEntity {
 	public void setPassword(String password) {
 		Password = password;
 	}
+	
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+    public String getFoto() {
+        return foto;
+    }
+
+    public Long getIdEspecialidad() {
+        return idEspecialidad;
+    }
+
+    public void setIdEspecialidad(Long idEspecialidad) {
+        this.idEspecialidad = idEspecialidad;
+    }
 }

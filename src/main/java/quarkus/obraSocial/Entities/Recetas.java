@@ -10,25 +10,13 @@ import jakarta.persistence.Id;
 @Entity
 public class Recetas extends PanacheEntity{
 
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idReceta",unique=true,nullable=false)
-	Long idReceta;
+
 	
 	@Column(name="idturno",nullable=false)
 	Long idturno;
 	
 	@Column(name="fecha_hora",nullable=false)
 	String fecha_hora;
-
-	public Long getIdReceta() {
-		return idReceta;
-	}
-
-	public void setIdReceta(Long idReceta) {
-		this.idReceta = idReceta;
-	}
 
 	public Long getIdturno() {
 		return idturno;

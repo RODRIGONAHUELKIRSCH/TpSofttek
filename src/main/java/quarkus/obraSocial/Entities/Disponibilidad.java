@@ -11,10 +11,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Disponibilidad extends PanacheEntity {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="iddisponibilidad",unique=true,nullable=false)
-	Long iddisponibilidad;
+
 	
 	@Column(name="idmedico",nullable=false)
 	Long idmedico;
@@ -24,14 +21,6 @@ public class Disponibilidad extends PanacheEntity {
 	
 	@Column(name="Ubicacion",nullable=false)
 	String Ubicacion;
-
-	public Long getIddisponibilidad() {
-		return iddisponibilidad;
-	}
-
-	public void setIddisponibilidad(Long iddisponibilidad) {
-		this.iddisponibilidad = iddisponibilidad;
-	}
 
 	public Long getIdmedico() {
 		return idmedico;

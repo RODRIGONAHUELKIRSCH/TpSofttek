@@ -10,21 +10,10 @@ import jakarta.persistence.Id;
 @Entity
 public class Especialidad extends PanacheEntity{
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idespecialidad",unique=true,nullable=false)
-	Long idespecialidad;
+
 	
 	@Column(name="Area_especialidad",nullable=false)
-	String Area_especialidad;
-
-	public Long getIdespecialidad() {
-		return idespecialidad;
-	}
-
-	public void setIdespecialidad(Long idespecialidad) {
-		this.idespecialidad = idespecialidad;
-	}
+	private String Area_especialidad;
 
 	public String getArea_especialidad() {
 		return Area_especialidad;
@@ -32,6 +21,11 @@ public class Especialidad extends PanacheEntity{
 
 	public void setArea_especialidad(String area_especialidad) {
 		Area_especialidad = area_especialidad;
+	}
+
+	public String getNombre() {
+		
+		return Area_especialidad;
 	}
 	
 }
