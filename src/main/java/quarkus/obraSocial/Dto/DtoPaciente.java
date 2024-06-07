@@ -1,28 +1,15 @@
-package quarkus.obraSocial.Entities;
+package quarkus.obraSocial.Dto;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+public class DtoPaciente {
 
 
-@Entity
-public class Medico extends PanacheEntity {
-
-
-	Long idespecialista;
-	
-	@Column(name="Nombre",nullable=false)
 	String Nombre;
-
-	@Column(name="Apellido",nullable=false)
+	
 	String Apellido;
 	
-	@Column(name="Email",unique=true,nullable=false)
 	String Email;
 	
-	@Column(name="Password",unique=true,nullable=false)
 	String Password;
-	
 
 	public String getNombre() {
 		return Nombre;
@@ -55,4 +42,5 @@ public class Medico extends PanacheEntity {
 	public void setPassword(String password) {
 		Password = password;
 	}
+	
 }

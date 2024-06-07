@@ -3,16 +3,10 @@ package quarkus.obraSocial.Entities;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 @Entity
 public class Turno extends PanacheEntity {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idTurno",unique=true,nullable=false)
 	Long idTurno;
 	
 	@Column(name="idpaciente",nullable=false)
@@ -27,20 +21,8 @@ public class Turno extends PanacheEntity {
 	@Column(name="motivo",nullable=false)
 	String motivo;
 	
-	
-	public enum estado{
-		Disponible,Reservado
-	}
-
-
-	public Long getIdTurno() {
-		return idTurno;
-	}
-
-
-	public void setIdTurno(Long idTurno) {
-		this.idTurno = idTurno;
-	}
+	@Column(name="estado",nullable=false)
+	String estado;
 
 
 	public Long getIdpaciente() {
