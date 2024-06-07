@@ -10,11 +10,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Turno extends PanacheEntity {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idTurno",unique=true,nullable=false)
-	Long idTurno;
-	
+
 	@Column(name="idpaciente",nullable=false)
 	Long idpaciente;
 	
@@ -31,17 +27,6 @@ public class Turno extends PanacheEntity {
 	public enum estado{
 		Disponible,Reservado
 	}
-
-
-	public Long getIdTurno() {
-		return idTurno;
-	}
-
-
-	public void setIdTurno(Long idTurno) {
-		this.idTurno = idTurno;
-	}
-
 
 	public Long getIdpaciente() {
 		return idpaciente;
