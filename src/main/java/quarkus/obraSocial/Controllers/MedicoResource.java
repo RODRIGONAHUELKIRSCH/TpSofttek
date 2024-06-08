@@ -21,6 +21,7 @@ public class MedicoResource {
 
     @POST
     public Response crearMedico(MedicoDTO medicoDTO) {
+    	
         MedicoDTO creado = medicoService.crearMedico(medicoDTO);
         return Response.ok(creado).build();
     }

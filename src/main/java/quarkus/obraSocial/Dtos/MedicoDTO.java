@@ -4,7 +4,7 @@ package quarkus.obraSocial.Dtos;
 public class MedicoDTO {
 	
 	private Long idEspecialidad;
-	
+
 	private String nombre;
 	
 	private String apellido;
@@ -15,18 +15,13 @@ public class MedicoDTO {
 	
 	private String password;
 	
-	 
+	private EspecialidadDTO especialidadDto;
+
 	
 	//GETTERS Y SETTTERS
-    public Long getIdEspecialidad() {
-        return idEspecialidad;
-    }
+	
 
-    public void setIdEspecialidad(Long idEspecialidad) {
-        this.idEspecialidad = idEspecialidad;
-    }
-
-    public String getNombre() {
+	public String getNombre() {
         return nombre;
     }
 
@@ -65,6 +60,20 @@ public class MedicoDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-     
+	public Long getIdEspecialidad() {
+		return idEspecialidad;
+	}
+
+	public void setIdEspecialidad(Long idEspecialidad) {
+		this.idEspecialidad = idEspecialidad;
+	}
+    public EspecialidadDTO getEspecialidadDto() {
+        return especialidadDto;
+    }
+
+    public void setEspecialidadDto(EspecialidadDTO especialidadDto) {
+        this.especialidadDto = especialidadDto;
+    }
+
 }
 

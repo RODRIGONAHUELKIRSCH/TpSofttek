@@ -7,6 +7,5 @@ import quarkus.obraSocial.Entities.Especialidad;
 @ApplicationScoped
 public class EspecialidadRepository implements PanacheRepository<Especialidad> {
     
-    
-    
+   
 }
