@@ -16,21 +16,24 @@ public class EspecialidadService {
 
     @Inject
     EspecialidadRepository especialidadRepository;
+    
+    @Inject 
+    EspecialidadMapper especialidadMapper;
 
     public List<EspecialidadDTO> listarTodas() {
         return especialidadRepository.listAll().stream()
-                .map(EspecialidadMapper::toDTO)
+                .map(especialidadMapper::toDTO)
                 .collect(Collectors.toList());
-    }
+    } 
 
     @Transactional
     public EspecialidadDTO crearEspecialidad(EspecialidadDTO especialidadDTO) {
         if (especialidadDTO.getAreaEspecialidad() == null || especialidadDTO.getAreaEspecialidad().isEmpty()) {
             throw new IllegalArgumentException("El área de especialidad no puede estar vacía.");
         }
-        Especialidad especialidad = EspecialidadMapper.toEspecialidad(especialidadDTO);
+        Especialidad especialidad = especialidadMapper.toEspecialidad(especialidadDTO);
         especialidadRepository.persist(especialidad);
-        return EspecialidadMapper.toDTO(especialidad);
+        return especialidadMapper.toDTO(especialidad);
     }
 
     public EspecialidadDTO encontrarPorId(Long id) {
@@ -38,7 +41,7 @@ public class EspecialidadService {
         if (especialidad == null) {
             return null;
         }
-        return EspecialidadMapper.toDTO(especialidad);
+        return especialidadMapper.toDTO(especialidad);
     }
 
     @Transactional
@@ -48,7 +51,7 @@ public class EspecialidadService {
             return null;
         }
         especialidad.setArea_especialidad(especialidadDTO.getAreaEspecialidad());
-        return EspecialidadMapper.toDTO(especialidad);
+        return especialidadMapper.toDTO(especialidad);
     }
 
     @Transactional

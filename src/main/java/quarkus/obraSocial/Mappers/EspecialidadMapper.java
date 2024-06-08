@@ -1,11 +1,13 @@
 package quarkus.obraSocial.Mappers;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import quarkus.obraSocial.Dtos.EspecialidadDTO;
 import quarkus.obraSocial.Entities.Especialidad;
 
+@ApplicationScoped
 public class EspecialidadMapper {
 
-    public static EspecialidadDTO toDTO(Especialidad especialidad) {
+    public EspecialidadDTO toDTO(Especialidad especialidad) {
         if (especialidad == null) {
             return null;
         }
@@ -15,7 +17,7 @@ public class EspecialidadMapper {
         );
     }
 
-    public static Especialidad toEspecialidad(EspecialidadDTO especialidadDTO) {
+    public Especialidad toEspecialidad(EspecialidadDTO especialidadDTO) {
         if (especialidadDTO == null) {
             return null;
         }
