@@ -3,13 +3,13 @@ package quarkus.obraSocial.Dtos;
 public class EspecialidadDTO {
 
     private Long idEspecialidad;
-    private String areaEspecialidad;
+    private String area_especialidad;
 
     public EspecialidadDTO() {}
 
     public EspecialidadDTO(Long id, String areaEspecialidad) {
         this.idEspecialidad = id;
-        this.areaEspecialidad = areaEspecialidad;
+        this.area_especialidad = areaEspecialidad;
     }
 
     public Long getIdEspecialidad() {
@@ -21,10 +21,10 @@ public class EspecialidadDTO {
     }
 
     public String getAreaEspecialidad() {
-        return areaEspecialidad;
+        return area_especialidad;
     }
 
     public void setAreaEspecialidad(String areaEspecialidad) {
-        this.areaEspecialidad = areaEspecialidad;
+        this.area_especialidad = areaEspecialidad;
     }
 }

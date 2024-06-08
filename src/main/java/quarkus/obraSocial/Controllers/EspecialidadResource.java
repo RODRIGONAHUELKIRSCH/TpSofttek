@@ -28,6 +28,7 @@ public class EspecialidadResource {
     @Inject
     EspecialidadService especialidadService;
 
+    
     @GET
     public List<EspecialidadDTO> listarEspecialidades() {
         return especialidadService.listarTodas();
