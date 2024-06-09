@@ -1,7 +1,11 @@
-package quarkus.obraSocial.Dtos;
+package quarkus.obraSocial.Dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MedicoDTO {
+	
+	private Long idMedico;
 	
 	private Long idEspecialidad;
 
@@ -75,5 +79,12 @@ public class MedicoDTO {
         this.especialidadDto = especialidadDto;
     }
 
-}
+	public Long getIdMedico() {
+		return idMedico;
+	}
 
+	public void setIdMedico(Long idMedico) {
+		this.idMedico = idMedico;
+	}
+
+}

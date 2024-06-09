@@ -31,6 +31,7 @@ public class MedicoMapper {
     public MedicoDTO convertirDto(Medico medico) {
     	
         MedicoDTO medicoDTO = new MedicoDTO();
+        medicoDTO.setIdMedico(medico.id);
         medicoDTO.setNombre(medico.getNombre());
         medicoDTO.setApellido(medico.getApellido());
         medicoDTO.setFoto(medico.getFoto());
