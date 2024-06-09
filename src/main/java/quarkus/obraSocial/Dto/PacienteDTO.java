@@ -1,6 +1,6 @@
 package quarkus.obraSocial.Dto;
 
-public class DtoPaciente {
+public class PacienteDTO {
 
 
 	String Nombre;

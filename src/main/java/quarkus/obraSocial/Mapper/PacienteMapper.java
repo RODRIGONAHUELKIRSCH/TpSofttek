@@ -1,13 +1,13 @@
 package quarkus.obraSocial.Mapper;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import quarkus.obraSocial.Dto.DtoPaciente;
+import quarkus.obraSocial.Dto.PacienteDTO;
 import quarkus.obraSocial.Entities.Paciente;
 
 @ApplicationScoped
 public class PacienteMapper {
 
-	public Paciente PacienteConverter(DtoPaciente dtopaciente) {
+	public Paciente PacienteConverter(PacienteDTO dtopaciente) {
 		
 		Paciente paciente= new Paciente();
 		paciente.setNombre(dtopaciente.getNombre());
@@ -17,8 +17,8 @@ public class PacienteMapper {
 		return paciente;
 	}
 	
-	public DtoPaciente DtoConverter(Paciente paciente) {
-		DtoPaciente dtopaciente=new DtoPaciente();
+	public PacienteDTO DtoConverter(Paciente paciente) {
+		PacienteDTO dtopaciente=new PacienteDTO();
 		dtopaciente.setNombre(paciente.getNombre());
 		dtopaciente.setApellido(paciente.getApellido());
 		dtopaciente.setEmail(paciente.getEmail());

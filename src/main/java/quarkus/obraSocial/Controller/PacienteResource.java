@@ -7,7 +7,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import quarkus.obraSocial.Dto.DtoPaciente;
+import quarkus.obraSocial.Dto.PacienteDTO;
 import quarkus.obraSocial.Services.PacienteService;
 
 @Path("/paciente")
@@ -19,9 +19,9 @@ public class PacienteResource {
 	PacienteService pservice;
 	
 	@POST
-	public Response crearPaciente(DtoPaciente dtopaciente) {
+	public Response crearPaciente(PacienteDTO dtopaciente) {
 		
-		DtoPaciente createPaciente=pservice.crearPaciente(dtopaciente);
+		PacienteDTO createPaciente=pservice.crearPaciente(dtopaciente);
 		return Response.ok(createPaciente).build();
 	}
 }
