@@ -18,7 +18,7 @@ public class Medico extends PanacheEntity {
 
 	
     @ManyToOne
-    @JoinColumn(name = "id_especialidad", nullable = false, foreignKey = @ForeignKey(name = "FK_medico_especialidad"))
+    @JoinColumn(name = "id_especialidad", nullable = false)
     private Especialidad especialidad;
 
 	@Column(name="nombre",nullable=false)

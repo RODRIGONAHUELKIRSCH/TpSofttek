@@ -36,24 +36,6 @@ public class EspecialidadService {
         return especialidadMapper.toDTO(especialidad);
     }
 
-    public EspecialidadDTO encontrarPorId(Long id) {
-        Especialidad especialidad = especialidadRepository.findById(id);
-        if (especialidad == null) {
-            return null;
-        }
-        return especialidadMapper.toDTO(especialidad);
-    }
-
-    @Transactional
-    public EspecialidadDTO actualizarEspecialidad(Long id, EspecialidadDTO especialidadDTO) {
-        Especialidad especialidad = especialidadRepository.findById(id);
-        if (especialidad == null) {
-            return null;
-        }
-        especialidad.setArea_especialidad(especialidadDTO.getAreaEspecialidad());
-        return especialidadMapper.toDTO(especialidad);
-    }
-
     @Transactional
     public boolean eliminarEspecialidad(Long id) {
         return especialidadRepository.deleteById(id);

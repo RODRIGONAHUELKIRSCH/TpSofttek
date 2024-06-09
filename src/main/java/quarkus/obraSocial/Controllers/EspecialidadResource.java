@@ -34,30 +34,10 @@ public class EspecialidadResource {
         return especialidadService.listarTodas();
     }
 
-    @GET
-    @Path("/{id}")
-    public Response obtenerEspecialidad(@PathParam("id") Long id) {
-        EspecialidadDTO especialidadDTO = especialidadService.encontrarPorId(id);
-        if (especialidadDTO == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        return Response.ok(especialidadDTO).build();
-    }
-
     @POST
     public Response crearEspecialidad(EspecialidadDTO especialidadDTO) {
         EspecialidadDTO creada = especialidadService.crearEspecialidad(especialidadDTO);
         return Response.status(Response.Status.CREATED).entity(creada).build();
-    }
-
-    @PUT
-    @Path("/{id}")
-    public Response actualizarEspecialidad(@PathParam("id") Long id, EspecialidadDTO especialidadDTO) {
-        EspecialidadDTO actualizada = especialidadService.actualizarEspecialidad(id, especialidadDTO);
-        if (actualizada == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        return Response.ok(actualizada).build();
     }
 
     @DELETE
