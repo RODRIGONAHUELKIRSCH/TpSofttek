@@ -6,12 +6,12 @@ import java.util.stream.Collectors;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import quarkus.obraSocial.Dto.MedicoDTO;
+import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Especialidad;
 import quarkus.obraSocial.Entities.Medico;
-import quarkus.obraSocial.Mapper.MedicoMapper;
-import quarkus.obraSocial.Repository.EspecialidadRepository;
-import quarkus.obraSocial.Repository.MedicoRepository;
+import quarkus.obraSocial.Mappers.MedicoMapper;
+import quarkus.obraSocial.Repositories.EspecialidadRepository;
+import quarkus.obraSocial.Repositories.MedicoRepository;
 
 @ApplicationScoped
 public class MedicoService {
