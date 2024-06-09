@@ -4,17 +4,8 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-
-
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import jakarta.persistence.ForeignKey;
 
 @Entity
@@ -22,7 +13,6 @@ import jakarta.persistence.ForeignKey;
 public class Medico extends PanacheEntity {
 
 
-	
     @ManyToOne
     @JoinColumn(name = "id_especialidad", nullable = false, foreignKey = @ForeignKey(name = "FK_medico_especialidad"))
     private Especialidad especialidad;
@@ -83,7 +73,6 @@ public class Medico extends PanacheEntity {
         return foto;
     }
     
-	
 	public Especialidad getEspecialidad() {
 		return especialidad;
 	}
@@ -91,6 +80,5 @@ public class Medico extends PanacheEntity {
 	public void setEspecialidad(Especialidad especialidad) {
 		this.especialidad = especialidad;
 	}
-
 
 }
