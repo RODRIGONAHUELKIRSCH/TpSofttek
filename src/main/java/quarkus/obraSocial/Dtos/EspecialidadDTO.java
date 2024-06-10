@@ -1,4 +1,4 @@
-package quarkus.obraSocial.Dto;
+package quarkus.obraSocial.Dtos;
 
 public class EspecialidadDTO {
 

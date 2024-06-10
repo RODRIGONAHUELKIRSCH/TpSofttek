@@ -3,10 +3,10 @@ package quarkus.obraSocial.Services;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import quarkus.obraSocial.Dto.PacienteDTO;
+import quarkus.obraSocial.Dtos.PacienteDTO;
 import quarkus.obraSocial.Entities.Paciente;
-import quarkus.obraSocial.Mapper.PacienteMapper;
-import quarkus.obraSocial.Repository.PacienteRepository;
+import quarkus.obraSocial.Mappers.PacienteMapper;
+import quarkus.obraSocial.Repositories.PacienteRepository;
 
 @ApplicationScoped
 public class PacienteService {

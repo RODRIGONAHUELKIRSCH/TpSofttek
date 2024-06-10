@@ -1,48 +1,68 @@
 package quarkus.obraSocial.Entities;
 
+
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Disponibilidad")
-public class Disponibilidad extends PanacheEntity {
+@Table(name = "Disponibilidad")
+public class Disponibilidad extends PanacheEntity{
 
-	Long iddisponibilidad;
+	 @Column(name = "medico_id", nullable = false)
+	    private Long medicoId;
 
-	@Column(name="idmedico",nullable=false)
-	Long idmedico;
+	    @Column(name = "fecha", nullable = false)
+	    private String fecha;
 
-	@Column(name="Fecha",nullable=false)
-	String Fecha;
+	    @Column(name = "hora_inicio", nullable = false)
+	    private String horaInicio;
 
-	@Column(name="Ubicacion",nullable=false)
-	String Ubicacion;
+	    @Column(name = "hora_fin", nullable = false)
+	    private String horaFin;
+	    
+	    @Column(name="ubicacion",nullable=false)
+	    private String ubicacion;
 
+	    // Getters y setters
 
-	public Long getIdmedico() {
-		return idmedico;
+		public Long getMedicoId() {
+	        return medicoId;
+	    }
+
+	    public void setMedicoId(Long medicoId) {
+	        this.medicoId = medicoId;
+	    }
+
+	    public String getFecha() {
+	        return fecha;
+	    }
+
+	    public void setFecha(String fecha) {
+	        this.fecha = fecha;
+	    }
+
+	    public String getHoraInicio() {
+	        return horaInicio;
+	    }
+
+	    public void setHoraInicio(String horaInicio) {
+	        this.horaInicio = horaInicio;
+	    }
+
+	    public String getHoraFin() {
+	        return horaFin;
+	    }
+
+	    public void setHoraFin(String horaFin) {
+	        this.horaFin = horaFin;
+	    }
+	    public String getUbicacion() {
+			return ubicacion;
+		}
+
+		public void setUbicacion(String ubicacion) {
+			this.ubicacion = ubicacion;
+		}
 	}
-
-	public void setIdmedico(Long idmedico) {
-		this.idmedico = idmedico;
-	}
-
-	public String getFecha() {
-		return Fecha;
-	}
-
-	public void setFecha(String fecha) {
-		Fecha = fecha;
-	}
-
-	public String getUbicacion() {
-		return Ubicacion;
-	}
-
-	public void setUbicacion(String ubicacion) {
-		Ubicacion = ubicacion;
-	}
-
-}
