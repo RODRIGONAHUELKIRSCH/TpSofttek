@@ -1,4 +1,4 @@
-package quarkus.obraSocial.Dto;
+package quarkus.obraSocial.Dtos;
 
 public class PacienteDTO {
 
@@ -10,6 +10,17 @@ public class PacienteDTO {
 	String Email;
 	
 	String Password;
+	
+	public PacienteDTO() {}
+	
+	public PacienteDTO(String nombre,String apellido,String email,String password) {
+		this.Nombre=nombre;
+		this.Apellido=apellido;
+		this.Email=email;
+		this.Password=password;
+		
+	}
+	
 
 	public String getNombre() {
 		return Nombre;

@@ -1,9 +1,12 @@
-package quarkus.obraSocial.Mapper;
+package quarkus.obraSocial.Mappers;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import quarkus.obraSocial.Dto.EspecialidadDTO;
-import quarkus.obraSocial.Dto.MedicoDTO;
+import jakarta.inject.Inject;
+import quarkus.obraSocial.Dtos.EspecialidadDTO;
+import quarkus.obraSocial.Dtos.MedicoDTO;
+import quarkus.obraSocial.Entities.Especialidad;
 import quarkus.obraSocial.Entities.Medico;
+import quarkus.obraSocial.Repositories.EspecialidadRepository;
 
 @ApplicationScoped
 public class MedicoMapper {
@@ -28,6 +31,7 @@ public class MedicoMapper {
     public MedicoDTO convertirDto(Medico medico) {
     	
         MedicoDTO medicoDTO = new MedicoDTO();
+        medicoDTO.setIdMedico(medico.id);
         medicoDTO.setNombre(medico.getNombre());
         medicoDTO.setApellido(medico.getApellido());
         medicoDTO.setFoto(medico.getFoto());

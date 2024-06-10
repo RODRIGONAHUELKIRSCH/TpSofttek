@@ -22,6 +22,16 @@ public class Paciente extends PanacheEntity{
 	@Column(name="Password",unique=true,nullable=false)
 	String Password;
 
+	
+	public Paciente() {}
+	
+	public Paciente(String nombre,String apellido,String email,String password) {
+		this.Nombre=nombre;
+		this.Apellido=apellido;
+		this.Email=email;
+		this.Password=password;
+	}
+	
 	public String getNombre() {
 		return Nombre;
 	}

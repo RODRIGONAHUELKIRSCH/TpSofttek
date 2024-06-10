@@ -1,7 +1,7 @@
-package quarkus.obraSocial.Mapper;
+package quarkus.obraSocial.Mappers;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import quarkus.obraSocial.Dto.PacienteDTO;
+import quarkus.obraSocial.Dtos.PacienteDTO;
 import quarkus.obraSocial.Entities.Paciente;
 
 @ApplicationScoped

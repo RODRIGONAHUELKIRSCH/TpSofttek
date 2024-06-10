@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import quarkus.obraSocial.Dto.EspecialidadDTO;
+import quarkus.obraSocial.Dtos.EspecialidadDTO;
 import quarkus.obraSocial.Entities.Especialidad;
-import quarkus.obraSocial.Mapper.EspecialidadMapper;
-import quarkus.obraSocial.Repository.EspecialidadRepository;
+import quarkus.obraSocial.Mappers.EspecialidadMapper;
+import quarkus.obraSocial.Repositories.EspecialidadRepository;
 
 @ApplicationScoped
 public class EspecialidadService {
@@ -33,24 +33,6 @@ public class EspecialidadService {
         }
         Especialidad especialidad = especialidadMapper.toEspecialidad(especialidadDTO);
         especialidadRepository.persist(especialidad);
-        return especialidadMapper.toDTO(especialidad);
-    }
-
-    public EspecialidadDTO encontrarPorId(Long id) {
-        Especialidad especialidad = especialidadRepository.findById(id);
-        if (especialidad == null) {
-            return null;
-        }
-        return especialidadMapper.toDTO(especialidad);
-    }
-
-    @Transactional
-    public EspecialidadDTO actualizarEspecialidad(Long id, EspecialidadDTO especialidadDTO) {
-        Especialidad especialidad = especialidadRepository.findById(id);
-        if (especialidad == null) {
-            return null;
-        }
-        especialidad.setArea_especialidad(especialidadDTO.getAreaEspecialidad());
         return especialidadMapper.toDTO(especialidad);
     }
 
