@@ -1,3 +1,9 @@
+## Datos importantes
+
+- **Rama principal es `develop`**: Tuvimos muchos errores a la hora de hacer merge con Eclipse y por esto, y dado que teníamos tiempo limitado, decidimos dejarlo todo en `develop`.
+- **Endpoints listados**: Los endpoints listados son los que están en el `README`. Faltan endpoints como el de la receta, pero no nos alcanzó el tiempo; veremos si podemos sumarlo para la próxima entrega. Además, queremos mejorar la lógica y las relaciones de los turnos y las disponibilidades.
+
+
 # Quarkus-obraSocial
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
