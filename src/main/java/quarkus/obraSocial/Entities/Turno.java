@@ -1,86 +1,35 @@
 package quarkus.obraSocial.Entities;
 
+
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.smallrye.common.constraint.NotNull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import quarkus.obraSocial.Enums.EstadoTurno;
+
 
 @Entity
+@Table(name = "Turno")
 public class Turno extends PanacheEntity {
+    
+    @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
+    private Disponibilidad disponibilidad;
+    
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado", nullable = false)
+    private EstadoTurno estado;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idTurno",unique=true,nullable=false)
-	Long idTurno;
-	
-	@Column(name="idpaciente",nullable=false)
-	Long idpaciente;
-	
-	@Column(name="idmedico",nullable=false)
-	Long idmedico;
-	
-	@Column(name="horarios",nullable=false)
-	String horarios;
-	
-	@Column(name="motivo",nullable=false)
-	String motivo;
-	
-	
-	public enum estado{
-		Disponible,Reservado
-	}
+    @Column(name = "motivo")
+    private String motivo;
 
+    @Column(name = "paciente")
+    private String paciente;
 
-	public Long getIdTurno() {
-		return idTurno;
-	}
-
-
-	public void setIdTurno(Long idTurno) {
-		this.idTurno = idTurno;
-	}
-
-
-	public Long getIdpaciente() {
-		return idpaciente;
-	}
-
-
-	public void setIdpaciente(Long idpaciente) {
-		this.idpaciente = idpaciente;
-	}
-
-
-	public Long getIdmedico() {
-		return idmedico;
-	}
-
-
-	public void setIdmedico(Long idmedico) {
-		this.idmedico = idmedico;
-	}
-
-
-	public String getHorarios() {
-		return horarios;
-	}
-
-
-	public void setHorarios(String horarios) {
-		this.horarios = horarios;
-	}
-
-
-	public String getMotivo() {
-		return motivo;
-	}
-
-
-	public void setMotivo(String motivo) {
-		this.motivo = motivo;
-	}
-	
-	
+    
 }

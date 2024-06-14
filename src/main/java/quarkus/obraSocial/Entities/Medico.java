@@ -3,67 +3,83 @@ package quarkus.obraSocial.Entities;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Medico")
 public class Medico extends PanacheEntity {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="idespecialista",unique=true,nullable=false)
-	Long idespecialista;
-	
-	@Column(name="Nombre",nullable=false)
-	String Nombre;
 
-	@Column(name="Apellido",nullable=false)
-	String Apellido;
-	
-	@Column(name="Email",unique=true,nullable=false)
-	String Email;
-	
-	@Column(name="Password",unique=true,nullable=false)
-	String Password;
-	
-	public Long getIdespecialista() {
-		return idespecialista;
-	}
+    @ManyToOne(targetEntity=Especialidad.class,fetch=FetchType.LAZY)
+    private Especialidad especialidad;
+    
 
-	public void setIdespecialista(Long idespecialista) {
-		this.idespecialista = idespecialista;
-	}
+	@Column(name="nombre",nullable=false)
+	private String nombre;
+
+	@Column(name="apellido",unique=true,nullable=false)
+	private String apellido;
+	
+	@Column(name="email",unique=true,nullable=false)
+	private String email;
+	
+	@Column(name="password",nullable=false)
+	private String password;
+	
+	@Column(name="foto",unique=true,nullable=false)
+	private String foto;
+	
 
 	public String getNombre() {
-		return Nombre;
+		return this.nombre;
 	}
 
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
 
 	public String getApellido() {
-		return Apellido;
+		return apellido;
 	}
 
 	public void setApellido(String apellido) {
-		Apellido = apellido;
+		this.apellido = apellido;
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
+	
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+    public String getFoto() {
+        return foto;
+    }
+    
+	
+	public Especialidad getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(Especialidad especialidad) {
+		this.especialidad = especialidad;
+	}
+
+
 }

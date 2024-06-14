@@ -3,64 +3,102 @@
 - **Rama principal es `develop`**: Tuvimos muchos errores a la hora de hacer merge con Eclipse y por esto, y dado que teníamos tiempo limitado, decidimos dejarlo todo en `develop`.
 - **Endpoints listados**: Los endpoints listados son los que están en el `README`. Faltan endpoints como el de la receta, pero no nos alcanzó el tiempo; veremos si podemos sumarlo para la próxima entrega. Además, queremos mejorar la lógica y las relaciones de los turnos y las disponibilidades.
 
+## Futuras mejoras
+- **Endpoint de recetas**: Implementación del endpoint de recetas.
+- **Mejoras en lógica**: Mejorar la lógica y las relaciones de los turnos y las disponibilidades.
 
-# Quarkus-obraSocial
+## Endpoints
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+### /medicos
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+- **GET /medicos**
+  - Consumes: application/json
+  - Produces: application/json
 
-## Running the application in dev mode
+- **POST /medicos**
+  - Ejemplo de solicitud:
+    ```json
+    {
+        "idEspecialidad": 1,
+        "nombre": "Lautaro",
+        "apellido": "Ortiz",
+        "foto": "foto",
+        "email": "lautaro@gmail.com",
+        "password": "123"
+    }
+    ```
+  - Consumes: application/json
+  - Produces: application/json
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+- **PUT /medicos/{id}**
+  - Consumes: application/json
+  - Produces: application/json
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+- **DELETE /medicos/{id}**
+  - Consumes: application/json
+  - Produces: application/json
 
-## Packaging and running the application
+### /especialidades
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+- **GET /especialidades**
+  - Consumes: application/json
+  - Produces: application/json
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+- **POST /especialidades**
+  - Ejemplo de solicitud:
+    ```json
+    {
+        "areaEspecialidad": "Cardiologo"
+    }
+    ```
+  - Consumes: application/json
+  - Produces: application/json
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
+- **DELETE /especialidades/{id}**
+  - Consumes: application/json
+  - Produces: application/json
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+### /paciente
 
-## Creating a native executable
+- **POST /paciente**
+  - Ejemplo de solicitud:
+    ```json
+    {
+        "nombre": "Rodrigo",
+        "apellido": "Kirsch",
+        "email": "rodrigo@gmail.com",
+        "password": "12345"
+    }
+    ```
+  - Consumes: application/json
+  - Produces: application/json
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Dnative
-```
+### /disponibilidades
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
+- **POST /disponibilidades**
+  - Ejemplo de solicitud:
+    ```json
+    {
+        "idMedico": 1, 
+        "fecha": "2024-06-30",
+        "hora": "09:00"
+    }
+    ```
+  - Consumes: application/json
+  - Produces: application/json
 
-You can then execute your native executable with: `./target/Quarkus-obraSocial-1.0.0-SNAPSHOT-runner`
+### /turnos
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Related Guides
-
-- RESTEasy Classic ([guide](https://quarkus.io/guides/resteasy)): REST endpoint framework implementing Jakarta REST and more
-
-## Provided Code
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+- **POST /turnos**
+  - Ejemplo de solicitud:
+    ```json
+    {
+        "disponibilidad":1,
+        "estado":"Disponible",
+        "motivo":"gripe",
+        "idpaciente": 1
+    }
+    ```
+  - Consumes: application/json
+  - Produces: application/json
+    

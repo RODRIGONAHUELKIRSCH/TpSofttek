@@ -1,60 +1,75 @@
 package quarkus.obraSocial.Entities;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.MapsId;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 @Entity
-public class Disponibilidad extends PanacheEntity {
+@Table(name = "Disponibilidad")
+public class Disponibilidad extends PanacheEntity  {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="iddisponibilidad",unique=true,nullable=false)
-	Long iddisponibilidad;
+//	
+//	@OneToOne
+//	@MapsId
+//	@JoinColumn(name="medicoid")
+//	Medico med=new Medico();
+//	
 	
-	@Column(name="idmedico",nullable=false)
-	Long idmedico;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id_medico",referencedColumnName="id")
+	private Medico med;
 	
-	@Column(name="Fecha",nullable=false)
-	String Fecha;
 	
-	@Column(name="Ubicacion",nullable=false)
-	String Ubicacion;
+	@Column(name="Horarios",nullable=false)
+	private List<String> horarios_consulta=new ArrayList<String>();
 
-	public Long getIddisponibilidad() {
-		return iddisponibilidad;
-	}
 
-	public void setIddisponibilidad(Long iddisponibilidad) {
-		this.iddisponibilidad = iddisponibilidad;
-	}
+	@Column(name = "ubicacion", nullable = false)
+	private String ubicacion;
 
-	public Long getIdmedico() {
-		return idmedico;
-	}
+	// Getters y setters
 
-	public void setIdmedico(Long idmedico) {
-		this.idmedico = idmedico;
-	}
-
-	public String getFecha() {
-		return Fecha;
-	}
-
-	public void setFecha(String fecha) {
-		Fecha = fecha;
-	}
+//	public Long getMedicoId() {
+//		return medicoId;
+//	}
+//
+//	public void setMedicoId(Long medicoId) {
+//		this.medicoId = medicoId;
+//	}
 
 	public String getUbicacion() {
-		return Ubicacion;
+		return ubicacion;
 	}
 
 	public void setUbicacion(String ubicacion) {
-		Ubicacion = ubicacion;
+		this.ubicacion = ubicacion;
 	}
 	
+	public List<String> getHorarios_consulta() {
+		return horarios_consulta;
+	}
+
+	public void setHorarios_consulta(List<String> horarios_consulta) {
+		this.horarios_consulta = horarios_consulta;
+	}
+	
+	public Medico getMed() {
+		return med;
+	}
+
+	public void setMed(Medico med) {
+		this.med = med;
+	}
+
+
 }

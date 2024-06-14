@@ -1,25 +1,14 @@
-package quarkus.obraSocial.Entities;
+package quarkus.obraSocial.Dtos;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name="Paciente")
-public class Paciente extends PanacheEntity{
+public class PacienteDTO {
 
 
-	@Column(name="Nombre",nullable=false)
 	String Nombre;
 	
-	@Column(name="Apellido",nullable=false)
 	String Apellido;
 	
-	@Column(name="Email",unique=true,nullable=false)
 	String Email;
 	
-	@Column(name="Password",unique=true,nullable=false)
 	String Password;
 
 	public String getNombre() {
