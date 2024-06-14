@@ -27,6 +27,10 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+			<dependency>
+  			<groupId>io.quarkus</groupId>
+ 				 <artifactId>quarkus-resteasy-jsonb</artifactId>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -54,19 +58,19 @@
 		<artifactId>lombok</artifactId>
 		<version>1.18.32</version>
 		<scope>provided</scope>
-	</dependency>
-	        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm</artifactId>
-        </dependency>
-                <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm-panache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm-rest-data-panache</artifactId>
-        </dependency>
+	    </dependency>
+	    <dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-hibernate-orm-panache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-jdbc-mysql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-resteasy-jackson</artifactId>
+		</dependency>
     </dependencies>
 
     <build>
