@@ -38,4 +38,19 @@ public class TurnoResource {
     	return turnoService.listarTurnos();
     }
     
+    @PUT
+    @Path("/{id}")
+    @Transactional
+    public Response updateTurno(@PathParam("id") Long id, TurnoDTO turnoDTO) {
+        TurnoDTO updated = turnoService.updateturno(id, turnoDTO);
+        return Response.ok(updated).build();
+    }
+    @DELETE
+    @Path("/{id}")
+    @Transactional
+    public Response deleteTurno(@PathParam("id") Long id) {
+        turnoService.deleteturno(id);
+        return Response.noContent().build();
+    }
+
 }

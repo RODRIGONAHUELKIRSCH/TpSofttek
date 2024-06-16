@@ -33,5 +33,14 @@ public class RecetaResource {
     public List<RecetaDTO> listarReceta(){
     	return recetaService.listarRecetas();
     }
+    
+    @GET
+    @Path("/{id}")
+    @Transactional
+    public Response obtenerrecetas(@PathParam("id") Long id) {
+         
+         return Response.ok(recetaService.obtenerreceta(id)).build();
+    }
+
 	
 }

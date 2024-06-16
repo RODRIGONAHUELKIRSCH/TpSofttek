@@ -43,6 +43,11 @@ public class RecetaService {
         return recetas.stream().map(RecetaMapper::recetaDTO).collect(Collectors.toList());
     }
     
+    public RecetaDTO obtenerreceta(Long id) {
+        Receta receta = recetaRepository.findById(id);
+        return RecetaMapper.recetaDTO(receta);
+    }
+    
 
 	
 }
