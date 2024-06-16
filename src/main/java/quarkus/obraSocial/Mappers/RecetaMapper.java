@@ -11,7 +11,7 @@ public class RecetaMapper {
     public RecetaDTO recetaDTO(Receta receta) {
         RecetaDTO recetadto = new RecetaDTO();
         recetadto.setFecha_hora(receta.getFecha_hora());
-        recetadto.setTurnodto(new TurnoDTO(receta.getTurno().getEstado(),receta.getTurno().getMotivo()));
+        recetadto.setTurnodto(new TurnoDTO(receta.getTurno().getEstado(),receta.getTurno().getMotivo(),receta.getTurno().getFecha_hora()));
         
         return recetadto;
     }

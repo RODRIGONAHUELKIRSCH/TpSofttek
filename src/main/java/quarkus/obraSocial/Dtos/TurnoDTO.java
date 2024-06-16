@@ -19,12 +19,14 @@ public class TurnoDTO {
     
     private Long pacienteid;
     
+    private String fecha_hora;
     public TurnoDTO() {}
     
-    public TurnoDTO(String estado,String motivo) {
+    public TurnoDTO(String estado,String motivo,String fecha_hora) {
     	
     	this.estado=estado;
     	this.motivo=motivo;
+    	this.fecha_hora=fecha_hora;
     }
 
 	public Long getId() {
@@ -81,6 +83,14 @@ public class TurnoDTO {
 
 	public void setPacienteid(Long pacienteid) {
 		this.pacienteid = pacienteid;
+	}
+
+	public String getFecha_hora() {
+		return fecha_hora;
+	}
+
+	public void setFecha_hora(String fecha_hora) {
+		this.fecha_hora = fecha_hora;
 	}
 	
 }

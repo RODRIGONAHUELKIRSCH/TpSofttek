@@ -23,13 +23,19 @@ public class DisponibilidadDTO {
 
 	public DisponibilidadDTO() {
 	}
-
-	public DisponibilidadDTO( String ubicacion,List<String> horarios) {
+	
+	public DisponibilidadDTO( String ubicacion) {
 		//this.id= id;
-		this.horariosConsulta=horarios;
 		this.ubicacion=ubicacion;
 
 	}
+
+//	public DisponibilidadDTO( String ubicacion,List<String> horarios) {
+//		//this.id= id;
+//		this.horariosConsulta=horarios;
+//		this.ubicacion=ubicacion;
+//
+//	}
 
 	public Long getId() {
 		return id;
