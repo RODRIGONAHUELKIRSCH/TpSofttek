@@ -12,7 +12,7 @@ public class EspecialidadMapper {
             return null;
         }
         return new EspecialidadDTO(
-                especialidad.id,
+                
                 especialidad.getArea_especialidad()
         );
     }

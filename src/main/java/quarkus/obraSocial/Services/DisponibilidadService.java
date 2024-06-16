@@ -3,14 +3,11 @@ package quarkus.obraSocial.Services;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
-import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
-import quarkus.obraSocial.Entities.Especialidad;
 import quarkus.obraSocial.Entities.Medico;
 import quarkus.obraSocial.Mappers.DisponibilidadMapper;
 import quarkus.obraSocial.Repositories.DisponibilidadRepository;

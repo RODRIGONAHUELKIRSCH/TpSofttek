@@ -20,15 +20,15 @@ public class MedicoDTO {
 	private String password;
 	
 	private EspecialidadDTO especialidadDto;
+	
+
 
 	
-	public MedicoDTO()	{}
-	
+	public MedicoDTO() {}
 	public MedicoDTO(String nombre,String apellido,String foto){
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.foto=foto;
-		
 	}	
 	//GETTERS Y SETTTERS
 	
@@ -94,5 +94,5 @@ public class MedicoDTO {
 	public void setIdMedico(Long idMedico) {
 		this.idMedico = idMedico;
 	}
-
+	
 }

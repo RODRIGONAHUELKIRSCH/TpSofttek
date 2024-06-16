@@ -4,8 +4,6 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.validation.Valid;
-
 
 @Entity
 @Table(name = "Especialidad")
@@ -22,6 +20,5 @@ public class Especialidad extends PanacheEntity{
 	public void setArea_especialidad(String area_especialidad) {
 		this.area_especialidad = area_especialidad;
 	}
-
 	
 }

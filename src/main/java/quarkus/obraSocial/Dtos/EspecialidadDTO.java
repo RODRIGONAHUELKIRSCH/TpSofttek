@@ -1,5 +1,8 @@
 package quarkus.obraSocial.Dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EspecialidadDTO {
 
     private Long idEspecialidad;
@@ -7,8 +10,8 @@ public class EspecialidadDTO {
 
     public EspecialidadDTO() {}
 
-    public EspecialidadDTO(Long id, String areaEspecialidad) {
-        this.idEspecialidad = id;
+    public EspecialidadDTO( String areaEspecialidad) {
+        
         this.area_especialidad = areaEspecialidad;
     }
 

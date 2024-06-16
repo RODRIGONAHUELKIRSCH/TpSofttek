@@ -21,8 +21,6 @@ public class PacienteMapper {
 		PacienteDTO dtopaciente=new PacienteDTO();
 		dtopaciente.setNombre(paciente.getNombre());
 		dtopaciente.setApellido(paciente.getApellido());
-		dtopaciente.setEmail(paciente.getEmail());
-		dtopaciente.setPassword(paciente.getPassword());
 		return dtopaciente;
 	}
 	

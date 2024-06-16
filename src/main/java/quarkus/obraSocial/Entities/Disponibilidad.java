@@ -1,16 +1,12 @@
 package quarkus.obraSocial.Entities;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -18,12 +14,6 @@ import jakarta.persistence.Table;
 @Table(name = "Disponibilidad")
 public class Disponibilidad extends PanacheEntity  {
 
-//	
-//	@OneToOne
-//	@MapsId
-//	@JoinColumn(name="medicoid")
-//	Medico med=new Medico();
-//	
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id_medico",referencedColumnName="id")
@@ -38,14 +28,6 @@ public class Disponibilidad extends PanacheEntity  {
 	private String ubicacion;
 
 	// Getters y setters
-
-//	public Long getMedicoId() {
-//		return medicoId;
-//	}
-//
-//	public void setMedicoId(Long medicoId) {
-//		this.medicoId = medicoId;
-//	}
 
 	public String getUbicacion() {
 		return ubicacion;
@@ -70,6 +52,5 @@ public class Disponibilidad extends PanacheEntity  {
 	public void setMed(Medico med) {
 		this.med = med;
 	}
-
 
 }
