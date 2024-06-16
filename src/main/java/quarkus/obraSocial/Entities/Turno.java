@@ -27,7 +27,10 @@ public class Turno extends PanacheEntity {
 	@JoinColumn(name="id_paciente",referencedColumnName="id")
     private Paciente paciente;
 
-	public Disponibilidad getDisponibilidad() {
+    @Column(name="fecha_hora")
+    private String fecha_hora;
+
+    public Disponibilidad getDisponibilidad() {
 		return disponibilidad;
 	}
 
@@ -57,6 +60,14 @@ public class Turno extends PanacheEntity {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+
+	public String getFecha_hora() {
+		return fecha_hora;
+	}
+
+	public void setFecha_hora(String fecha_hora) {
+		this.fecha_hora = fecha_hora;
 	}
 	
 }
