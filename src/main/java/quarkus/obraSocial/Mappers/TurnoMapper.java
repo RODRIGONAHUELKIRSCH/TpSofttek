@@ -12,6 +12,7 @@ public class TurnoMapper {
     public TurnoDTO turnoDTO(Turno turno) {
         TurnoDTO turnodto = new TurnoDTO();
         turnodto.setDispdto(new DisponibilidadDTO(turno.getDisponibilidad().getUbicacion()));
+        turnodto.setIdmedico(turno.getDisponibilidad().getMed().id);
         turnodto.setMotivo(turno.getMotivo());
         turnodto.setEstado(turno.getEstado());
         turnodto.setFecha_hora(turno.getFecha_hora());
@@ -24,6 +25,7 @@ public class TurnoMapper {
     	turno.setEstado(turnodto.getEstado());
     	turno.setMotivo(turnodto.getMotivo());   	
     	turno.setFecha_hora(turnodto.getFecha_hora());
+    	turno.setIdmedico(turnodto.getIdmedico());
     	return turno;
     }
     

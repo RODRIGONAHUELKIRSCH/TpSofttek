@@ -20,6 +20,8 @@ public class TurnoDTO {
     private Long pacienteid;
     
     private String fecha_hora;
+    
+    private Long idmedico;
     public TurnoDTO() {}
     
     public TurnoDTO(String estado,String motivo,String fecha_hora) {
@@ -92,5 +94,13 @@ public class TurnoDTO {
 	public void setFecha_hora(String fecha_hora) {
 		this.fecha_hora = fecha_hora;
 	}
-	
+
+	public Long getIdmedico() {
+		return idmedico;
+	}
+
+	public void setIdmedico(Long idmedico) {
+		this.idmedico = idmedico;
+	}
+		
 }

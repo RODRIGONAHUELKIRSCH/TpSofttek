@@ -29,6 +29,9 @@ public class Turno extends PanacheEntity {
 
     @Column(name="fecha_hora")
     private String fecha_hora;
+    
+    @Column(name="idmedico")
+    private Long idmedico;
 
     public Disponibilidad getDisponibilidad() {
 		return disponibilidad;
@@ -68,6 +71,14 @@ public class Turno extends PanacheEntity {
 
 	public void setFecha_hora(String fecha_hora) {
 		this.fecha_hora = fecha_hora;
+	}
+
+	public Long getIdmedico() {
+		return idmedico;
+	}
+
+	public void setIdmedico(Long idmedico) {
+		this.idmedico = idmedico;
 	}
 	
 }

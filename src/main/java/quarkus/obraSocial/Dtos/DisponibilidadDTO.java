@@ -20,6 +20,8 @@ public class DisponibilidadDTO {
 	private MedicoDTO medicodto;
 	
 	private String espdto;
+	
+	private String areaEspecialidad;
 
 	public DisponibilidadDTO() {
 	}
@@ -85,4 +87,12 @@ public class DisponibilidadDTO {
 		this.espdto = espdto;
 	}
 
+	public String getAreaEspecialidad() {
+		return areaEspecialidad;
+	}
+
+	public void setAreaEspecialidad(String areaEspecialidad) {
+		this.areaEspecialidad = areaEspecialidad;
+	}
+	
 }
