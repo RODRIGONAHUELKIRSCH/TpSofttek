@@ -42,6 +42,12 @@ public class DisponibilidadService {
         return disp.stream().map(disponibilidadMapper::disponibilidadADto).collect(Collectors.toList());
     }
     
+    @Transactional
+    public List<DisponibilidadDTO> listarEspecialista() {
+        List<Disponibilidad> disp = disponibilidadRepository.listAll();
+        return disp.stream().map(disponibilidadMapper::listardispEspecialista).collect(Collectors.toList());
+    }
+    
 //    public List<MedicoDTO> listarMedicos() {
 //        List<Medico> medicos = medicoRepository.listAll();
 //        return medicos.stream().map(medicoMapper::convertirDto).collect(Collectors.toList());

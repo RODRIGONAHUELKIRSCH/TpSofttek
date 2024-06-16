@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import jakarta.ws.rs.WebApplicationException;
 import quarkus.obraSocial.Dtos.TurnoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
 import quarkus.obraSocial.Entities.Paciente;

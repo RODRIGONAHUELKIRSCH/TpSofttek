@@ -22,7 +22,7 @@ import java.util.List;
 @Path("/disponibilidades")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class DisponibilidadResource implements Serializable{
+public class DisponibilidadResource {
 
     @Inject
     DisponibilidadService disponibilidadService;
@@ -36,5 +36,12 @@ public class DisponibilidadResource implements Serializable{
     @GET
     public List<DisponibilidadDTO> listarDisponibilidad(){
     	return disponibilidadService.listarDisponibilidades();
+    }
+    
+    
+    @GET
+    @Path("/especialistas")
+    public List<DisponibilidadDTO> listarEspecialistas(){
+    	return disponibilidadService.listarEspecialista();
     }
 }

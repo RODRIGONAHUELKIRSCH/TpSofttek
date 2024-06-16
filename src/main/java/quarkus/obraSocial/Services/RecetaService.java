@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import jakarta.ws.rs.WebApplicationException;
 import quarkus.obraSocial.Repositories.RecetaRepository;
 import quarkus.obraSocial.Repositories.TurnoRepository;
 import quarkus.obraSocial.Dtos.RecetaDTO;
@@ -41,5 +42,7 @@ public class RecetaService {
         List<Receta> recetas = recetaRepository.listAll();
         return recetas.stream().map(RecetaMapper::recetaDTO).collect(Collectors.toList());
     }
+    
+
 	
 }

@@ -28,5 +28,13 @@ public class DisponibilidadMapper {
 		return disponibilidad;
 	}
 
-
+	public DisponibilidadDTO listardispEspecialista(Disponibilidad disp) {
+		DisponibilidadDTO dto = new DisponibilidadDTO();
+		dto.setMedicodto(new MedicoDTO(disp.getMed().getNombre(),disp.getMed().getApellido(),disp.getMed().getFoto()));;
+		//dto.setMeddto(disponibilidad.getMed());
+		dto.setAreaEspecialidad(disp.getMed().getEspecialidad().getArea_especialidad());
+		dto.setUbicacion(disp.getUbicacion());
+		dto.setHorariosConsulta(disp.getHorarios_consulta());
+		return dto;
+	}
 }
