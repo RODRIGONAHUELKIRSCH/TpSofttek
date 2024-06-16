@@ -1,7 +1,6 @@
 package quarkus.obraSocial.Controllers;
 
 import java.util.List;
-
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -10,27 +9,26 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import quarkus.obraSocial.Dtos.DisponibilidadDTO;
-import quarkus.obraSocial.Dtos.TurnoDTO;
-import quarkus.obraSocial.Services.DisponibilidadService;
-import quarkus.obraSocial.Services.TurnoService;
+import quarkus.obraSocial.Dtos.RecetaDTO;
+import quarkus.obraSocial.Services.RecetaService;
 
-@Path("/turnos")
+@Path("/recetas")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class TurnoResource {
+public class RecetaResource {
 
 	@Inject
-    TurnoService turnoService;
+    RecetaService recetaService;
 
     @POST
-    public Response agregarTurno(TurnoDTO turnodto) {
-        TurnoDTO creada = turnoService.agregarTurno(turnodto);
+    public Response agregarTurno(RecetaDTO recetadto) {
+        RecetaDTO creada = recetaService.agregarReceta(recetadto);
         return Response.status(Response.Status.CREATED).entity(creada).build();
     }
     
     @GET
-    public List<TurnoDTO> listarTurno(){
-    	return turnoService.listarTurnos();
+    public List<RecetaDTO> listarReceta(){
+    	return recetaService.listarRecetas();
     }
+	
 }

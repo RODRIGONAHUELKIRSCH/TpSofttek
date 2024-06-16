@@ -1,5 +1,8 @@
 package quarkus.obraSocial.Dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PacienteDTO {
 
 
@@ -10,6 +13,13 @@ public class PacienteDTO {
 	String Email;
 	
 	String Password;
+	
+	public PacienteDTO() {}
+	
+	public PacienteDTO(String nombre, String apellido) {
+		this.Nombre=nombre;
+		this.Apellido=apellido;
+	}
 
 	public String getNombre() {
 		return Nombre;

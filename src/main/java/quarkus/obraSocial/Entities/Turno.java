@@ -1,17 +1,14 @@
 package quarkus.obraSocial.Entities;
 
-
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.smallrye.common.constraint.NotNull;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import quarkus.obraSocial.Enums.EstadoTurno;
-
 
 @Entity
 @Table(name = "Turno")
@@ -20,16 +17,46 @@ public class Turno extends PanacheEntity {
     @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
     private Disponibilidad disponibilidad;
     
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
-    private EstadoTurno estado;
+    @Column(name="estado_turno")
+    private String estado;
 
     @Column(name = "motivo")
     private String motivo;
 
-    @Column(name = "paciente")
-    private String paciente;
+    @OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id_paciente",referencedColumnName="id")
+    private Paciente paciente;
 
-    
+	public Disponibilidad getDisponibilidad() {
+		return disponibilidad;
+	}
+
+	public void setDisponibilidad(Disponibilidad disponibilidad) {
+		this.disponibilidad = disponibilidad;
+	}
+
+	public String getMotivo() {
+		return motivo;
+	}
+
+	public void setMotivo(String motivo) {
+		this.motivo = motivo;
+	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	
 }

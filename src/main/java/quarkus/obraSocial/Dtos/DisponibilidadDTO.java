@@ -1,14 +1,8 @@
 package quarkus.obraSocial.Dtos;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import quarkus.obraSocial.Entities.Medico;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class DisponibilidadDTO {
@@ -24,12 +18,14 @@ public class DisponibilidadDTO {
 	private List<String> horariosConsulta=new ArrayList<String>();
 	
 	private MedicoDTO medicodto;
+	
+	private String espdto;
 
 	public DisponibilidadDTO() {
 	}
 
-	public DisponibilidadDTO(Long id, String ubicacion,List<String> horarios) {
-		this.id= id;
+	public DisponibilidadDTO( String ubicacion,List<String> horarios) {
+		//this.id= id;
 		this.horariosConsulta=horarios;
 		this.ubicacion=ubicacion;
 
@@ -42,27 +38,10 @@ public class DisponibilidadDTO {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-//	public Long getIdMedico() {
-//		return idMedico;
-//	}
-//
-//	public void setIdMedico(Long idMedico) {
-//		this.idMedico = idMedico;
-//	}
-	
 	
 	public String getUbicacion() {
 		return ubicacion;
 	}
-
-//	public Medico getIdMedico() {
-//		return idMedico;
-//	}
-//
-//	public void setIdMedico(Medico idMedico) {
-//		this.idMedico = idMedico;
-//	}
 
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
@@ -92,6 +71,12 @@ public class DisponibilidadDTO {
 		this.idMedico = idMedico;
 	}
 
+	public String getEspdto() {
+		return espdto;
+	}
 
+	public void setEspdto(String espdto) {
+		this.espdto = espdto;
+	}
 
 }

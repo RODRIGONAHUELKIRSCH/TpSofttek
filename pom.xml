@@ -27,10 +27,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-			<dependency>
-  			<groupId>io.quarkus</groupId>
- 				 <artifactId>quarkus-resteasy-jsonb</artifactId>
-			</dependency>
+
         </dependencies>
     </dependencyManagement>
 
