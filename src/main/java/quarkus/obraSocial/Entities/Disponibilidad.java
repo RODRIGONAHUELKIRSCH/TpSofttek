@@ -7,14 +7,18 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Disponibilidad")
+<<<<<<< HEAD
 <<<<<<< HEAD
 public class Disponibilidad extends PanacheEntity  {
 
@@ -33,6 +37,8 @@ public class Disponibilidad extends PanacheEntity  {
 
 	// Getters y setters
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 public class Disponibilidad extends PanacheEntity {
 
 	@Column(name = "medico_id", nullable = false)
@@ -63,6 +69,17 @@ public class Disponibilidad extends PanacheEntity {
 
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
+<<<<<<< HEAD
+=======
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	}
 
 	public String getHora() {
@@ -80,6 +97,7 @@ public class Disponibilidad extends PanacheEntity {
 
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
+<<<<<<< HEAD
 	}
 <<<<<<< HEAD
 	
@@ -100,5 +118,8 @@ public class Disponibilidad extends PanacheEntity {
 	}
 
 =======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+	}
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

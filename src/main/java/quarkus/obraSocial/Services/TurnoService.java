@@ -1,6 +1,7 @@
 package quarkus.obraSocial.Services;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,18 +17,24 @@ import quarkus.obraSocial.Mappers.TurnoMapper;
 import quarkus.obraSocial.Repositories.DisponibilidadRepository;
 import quarkus.obraSocial.Repositories.PacienteRepository;
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import quarkus.obraSocial.Dtos.TurnoDTO;
 import quarkus.obraSocial.Entities.Turno;
 import quarkus.obraSocial.Mappers.TurnoMapper;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 import quarkus.obraSocial.Repositories.TurnoRepository;
 
 @ApplicationScoped
 public class TurnoService {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @Inject
     TurnoRepository TurnoRepository;
@@ -77,6 +84,8 @@ public class TurnoService {
         TurnoRepository.delete(turno);
     }
 	
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

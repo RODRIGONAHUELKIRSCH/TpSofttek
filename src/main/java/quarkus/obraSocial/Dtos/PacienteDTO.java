@@ -1,9 +1,12 @@
 package quarkus.obraSocial.Dtos;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 public class PacienteDTO {
@@ -17,6 +20,7 @@ public class PacienteDTO {
 	
 	String Password;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	public PacienteDTO() {}
 	
@@ -24,6 +28,8 @@ public class PacienteDTO {
 		this.Nombre=nombre;
 		this.Apellido=apellido;
 	}
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 

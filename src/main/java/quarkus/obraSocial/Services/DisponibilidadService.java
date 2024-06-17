@@ -1,9 +1,15 @@
 package quarkus.obraSocial.Services;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import java.util.List;
 import java.util.stream.Collectors;
+=======
+import java.util.List;
+import java.util.stream.Collectors;
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,6 +23,10 @@ import quarkus.obraSocial.Entities.Disponibilidad;
 import quarkus.obraSocial.Entities.Medico;
 import quarkus.obraSocial.Mappers.DisponibilidadMapper;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import quarkus.obraSocial.Mappers.MedicoMapper;
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 import quarkus.obraSocial.Mappers.MedicoMapper;
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
@@ -38,6 +48,7 @@ public class DisponibilidadService {
     @Transactional
     public DisponibilidadDTO agregarDisponibilidad(DisponibilidadDTO disponibilidadDTO) {
         Disponibilidad disponibilidad = disponibilidadMapper.dtoADisponibilidad(disponibilidadDTO);
+<<<<<<< HEAD
 <<<<<<< HEAD
   	   Medico medico = medicoRepository.findById(disponibilidadDTO.getIdMedico());
        if (medico == null) {
@@ -63,6 +74,11 @@ public class DisponibilidadService {
 //        List<Medico> medicos = medicoRepository.listAll();
 //        return medicos.stream().map(medicoMapper::convertirDto).collect(Collectors.toList());
 //    }
+=======
+        disponibilidadRepository.persist(disponibilidad);
+        return disponibilidadMapper.disponibilidadADto(disponibilidad);
+    }
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
         disponibilidadRepository.persist(disponibilidad);
         return disponibilidadMapper.disponibilidadADto(disponibilidad);

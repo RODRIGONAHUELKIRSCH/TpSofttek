@@ -14,10 +14,15 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Services.DisponibilidadService;
 
 import java.io.Serializable;
+=======
+import quarkus.obraSocial.Services.DisponibilidadService;
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 import quarkus.obraSocial.Services.DisponibilidadService;
 
@@ -38,6 +43,7 @@ public class DisponibilidadResource {
         return Response.status(Response.Status.CREATED).entity(creada).build();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     @GET
     public List<DisponibilidadDTO> listarDisponibilidad(){
@@ -50,6 +56,8 @@ public class DisponibilidadResource {
     public List<DisponibilidadDTO> listarEspecialistas(){
     	return disponibilidadService.listarEspecialista();
     }
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }
