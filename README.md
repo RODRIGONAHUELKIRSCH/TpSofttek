@@ -1,104 +1,57 @@
 ## Datos importantes
 
 - **Rama principal es `develop`**: Tuvimos muchos errores a la hora de hacer merge con Eclipse y por esto, y dado que teníamos tiempo limitado, decidimos dejarlo todo en `develop`.
-- **Endpoints listados**: Los endpoints listados son los que están en el `README`. Faltan endpoints como el de la receta, pero no nos alcanzó el tiempo; veremos si podemos sumarlo para la próxima entrega. Además, queremos mejorar la lógica y las relaciones de los turnos y las disponibilidades.
+- **Endpoints listados**: Los endpoints listados son los que están en el `README`. 
 
-## Futuras mejoras
-- **Endpoint de recetas**: Implementación del endpoint de recetas.
-- **Mejoras en lógica**: Mejorar la lógica y las relaciones de los turnos y las disponibilidades.
+-**Consideraciones al realizar los endpoint si elimina un turno se elimina el paciente asociado a ese turno ademas si quiere eliminar un turno y este tiene una receta asociada a el se debera eliminar la receta primero
 
 ## Endpoints
 
-### /medicos
+Crear paciente
+{
+    "nombre": "Jhon",
+    "apellido": "Doe",
+    "email": "jdoe@gmail.com",
+    "password": "superdificilpassword"
+}
 
-- **GET /medicos**
-  - Consumes: application/json
-  - Produces: application/json
+Crear especialidad 
 
-- **POST /medicos**
-  - Ejemplo de solicitud:
-    ```json
-    {
-        "idEspecialidad": 1,
-        "nombre": "Lautaro",
-        "apellido": "Ortiz",
-        "foto": "foto",
-        "email": "lautaro@gmail.com",
-        "password": "123"
-    }
-    ```
-  - Consumes: application/json
-  - Produces: application/json
+{
+    "areaEspecialidad":"Cardiologia"
+}
 
-- **PUT /medicos/{id}**
-  - Consumes: application/json
-  - Produces: application/json
+Crear medico
 
-- **DELETE /medicos/{id}**
-  - Consumes: application/json
-  - Produces: application/json
+{ "idEspecialidad": 1, "nombre": "Javier", "apellido": "Milei", "foto": "mifotojmilei.png",
+"email": "jmilei@gmail.com", "password": "capitandelalocura" }
 
-### /especialidades
+Crear disponibilidad
 
-- **GET /especialidades**
-  - Consumes: application/json
-  - Produces: application/json
+{"idMedico":1,"horariosConsulta":["8:00","9:00","10:00"],"ubicacion":"tuubicacion"}
 
-- **POST /especialidades**
-  - Ejemplo de solicitud:
-    ```json
-    {
-        "areaEspecialidad": "Cardiologo"
-    }
-    ```
-  - Consumes: application/json
-  - Produces: application/json
+Crear turno
 
-- **DELETE /especialidades/{id}**
-  - Consumes: application/json
-  - Produces: application/json
+{"disponibilidadId":1,"estado":"Disponible","motivo":"gripe","pacienteid": 51,"fecha_hora":"lafechahoradelturno","idmedico":1}
 
-### /paciente
+Listar Especialistas
+metodo get http://localhost:8080/disponibilidades/especialistas este es el segundo endpoint donde trae todos los especialistas
 
-- **POST /paciente**
-  - Ejemplo de solicitud:
-    ```json
-    {
-        "nombre": "Rodrigo",
-        "apellido": "Kirsch",
-        "email": "rodrigo@gmail.com",
-        "password": "12345"
-    }
-    ```
-  - Consumes: application/json
-  - Produces: application/json
 
-### /disponibilidades
+Actualizar turno
 
-- **POST /disponibilidades**
-  - Ejemplo de solicitud:
-    ```json
-    {
-        "idMedico": 1, 
-        "fecha": "2024-06-30",
-        "hora": "09:00"
-    }
-    ```
-  - Consumes: application/json
-  - Produces: application/json
+{
+    "motivo":"fiebre","fecha_hora":"nuevafechahoradelturno","idmedico":1
+}
 
-### /turnos
+Borrar turno http://localhost:8080/turnos/1
 
-- **POST /turnos**
-  - Ejemplo de solicitud:
-    ```json
-    {
-        "disponibilidad":1,
-        "estado":"Disponible",
-        "motivo":"gripe",
-        "idpaciente": 1
-    }
-    ```
-  - Consumes: application/json
-  - Produces: application/json
+Crear receta
+
+{
+    "idturno":1,
+    "fecha_hora":"lahorayfecha"
+}
+    
+Borrar receta http://localhost:8080/recetas/1
     
