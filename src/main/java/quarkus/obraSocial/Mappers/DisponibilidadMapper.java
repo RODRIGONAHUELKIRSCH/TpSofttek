@@ -4,12 +4,15 @@ import jakarta.enterprise.context.ApplicationScoped;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import jakarta.inject.Inject;
@@ -20,15 +23,19 @@ import quarkus.obraSocial.Entities.Medico;
 import quarkus.obraSocial.Services.MedicoService;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 @ApplicationScoped
 public class DisponibilidadMapper {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +51,8 @@ public class DisponibilidadMapper {
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	@Inject
@@ -62,9 +71,12 @@ public class DisponibilidadMapper {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 		return dto;
@@ -72,6 +84,7 @@ public class DisponibilidadMapper {
 
 	public Disponibilidad dtoADisponibilidad(DisponibilidadDTO dto) {
 		Disponibilidad disponibilidad = new Disponibilidad();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +107,8 @@ public class DisponibilidadMapper {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 		MedicoDTO medicoDTO = obtenerMedicoDTO(dto.getIdMedico()); // Obtener el MedicoDTO del ID proporcionado
 		disponibilidad.setMedicoId(dto.getIdMedico()); // Convertir MedicoDTO a Medico
 		disponibilidad.setFecha(dto.getFecha());
@@ -107,9 +122,12 @@ public class DisponibilidadMapper {
 		return medicoService.obtenerMedicoDTOPorId(medicoId);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	}

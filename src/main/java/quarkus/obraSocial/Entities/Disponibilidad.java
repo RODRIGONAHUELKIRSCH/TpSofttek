@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 =======
@@ -17,10 +18,13 @@ import jakarta.persistence.OneToOne;
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Disponibilidad")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +47,8 @@ public class Disponibilidad extends PanacheEntity  {
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 public class Disponibilidad extends PanacheEntity {
@@ -77,8 +83,19 @@ public class Disponibilidad extends PanacheEntity {
 		this.fecha = fecha;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	}
 
 	public String getHora() {
@@ -116,6 +133,7 @@ public class Disponibilidad extends PanacheEntity {
 		this.ubicacion = ubicacion;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 <<<<<<< HEAD
 	
@@ -140,6 +158,9 @@ public class Disponibilidad extends PanacheEntity {
 =======
 	}
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+	}
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 	}
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
