@@ -2,6 +2,7 @@ package quarkus.obraSocial.Controllers;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 
 import jakarta.inject.Inject;
@@ -22,6 +23,8 @@ import quarkus.obraSocial.Services.DisponibilidadService;
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
@@ -31,9 +34,12 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import quarkus.obraSocial.Dtos.TurnoDTO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import quarkus.obraSocial.Services.TurnoService;
 
 @Path("/turnos")
@@ -41,6 +47,7 @@ import quarkus.obraSocial.Services.TurnoService;
 @Consumes(MediaType.APPLICATION_JSON)
 public class TurnoResource {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	@Inject
@@ -75,5 +82,7 @@ public class TurnoResource {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 }

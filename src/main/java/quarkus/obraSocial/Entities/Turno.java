@@ -3,6 +3,7 @@ package quarkus.obraSocial.Entities;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,6 +21,11 @@ import io.smallrye.common.constraint.NotNull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+import io.smallrye.common.constraint.NotNull;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.JoinColumn;
@@ -27,14 +33,18 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import quarkus.obraSocial.Enums.EstadoTurno;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 @Entity
 @Table(name = "Turno")
 public class Turno extends PanacheEntity {
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
@@ -131,12 +141,29 @@ public class Turno extends PanacheEntity {
     private String motivo;
 
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+    @ManyToOne
+    @JoinColumn(name = "disponibilidad_id", nullable = false)
+    private Disponibilidad disponibilidad;
+    
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado", nullable = false)
+    private EstadoTurno estado;
+
+    @Column(name = "motivo")
+    private String motivo;
+
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
     @Column(name = "paciente")
     private String paciente;
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 }

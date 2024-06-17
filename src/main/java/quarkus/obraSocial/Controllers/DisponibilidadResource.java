@@ -15,6 +15,7 @@ import jakarta.ws.rs.core.Response;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Services.DisponibilidadService;
 
@@ -27,6 +28,10 @@ import quarkus.obraSocial.Services.DisponibilidadService;
 import quarkus.obraSocial.Services.DisponibilidadService;
 
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+import quarkus.obraSocial.Services.DisponibilidadService;
+
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import java.util.List;
 
 @Path("/disponibilidades")
@@ -42,6 +47,7 @@ public class DisponibilidadResource {
         DisponibilidadDTO creada = disponibilidadService.agregarDisponibilidad(disponibilidadDTO);
         return Response.status(Response.Status.CREATED).entity(creada).build();
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -60,4 +66,6 @@ public class DisponibilidadResource {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 }
