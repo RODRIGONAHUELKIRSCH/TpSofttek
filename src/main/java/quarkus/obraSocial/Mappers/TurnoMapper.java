@@ -2,6 +2,7 @@ package quarkus.obraSocial.Mappers;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import jakarta.enterprise.context.ApplicationScoped;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.PacienteDTO;
@@ -33,14 +34,19 @@ public class TurnoMapper {
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import quarkus.obraSocial.Dtos.TurnoDTO;
 import quarkus.obraSocial.Entities.Turno;
 
 
 public interface TurnoMapper {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
     
 }

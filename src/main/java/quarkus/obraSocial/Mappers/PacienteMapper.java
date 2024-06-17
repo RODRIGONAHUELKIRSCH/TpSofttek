@@ -23,6 +23,7 @@ public class PacienteMapper {
 		dtopaciente.setApellido(paciente.getApellido());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		dtopaciente.setEmail(paciente.getEmail());
 		dtopaciente.setPassword(paciente.getPassword());
@@ -31,6 +32,10 @@ public class PacienteMapper {
 		dtopaciente.setEmail(paciente.getEmail());
 		dtopaciente.setPassword(paciente.getPassword());
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+		dtopaciente.setEmail(paciente.getEmail());
+		dtopaciente.setPassword(paciente.getPassword());
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 		return dtopaciente;
 	}
 	
