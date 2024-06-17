@@ -1,5 +1,6 @@
 package quarkus.obraSocial.Mappers;
 
+<<<<<<< HEAD
 import jakarta.enterprise.context.ApplicationScoped;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.PacienteDTO;
@@ -28,5 +29,12 @@ public class TurnoMapper {
     	turno.setIdmedico(turnodto.getIdmedico());
     	return turno;
     }
+=======
+import quarkus.obraSocial.Dtos.TurnoDTO;
+import quarkus.obraSocial.Entities.Turno;
+
+
+public interface TurnoMapper {
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
     
 }

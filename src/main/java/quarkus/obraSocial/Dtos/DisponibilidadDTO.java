@@ -1,5 +1,6 @@
 package quarkus.obraSocial.Dtos;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -39,6 +40,30 @@ public class DisponibilidadDTO {
 //
 //	}
 
+=======
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class DisponibilidadDTO {
+
+	private Long id;
+	private Long idMedico;
+	private String fecha;
+	private String hora;
+	private String ubicacion;
+
+	public DisponibilidadDTO() {
+	}
+
+	public DisponibilidadDTO(Long id, Long idMedico, String fecha, String hora) {
+		this.id = id;
+		this.idMedico = idMedico;
+		this.fecha = fecha;
+		this.hora = hora;
+
+	}
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	public Long getId() {
 		return id;
 	}
@@ -46,6 +71,7 @@ public class DisponibilidadDTO {
 	public void setId(Long id) {
 		this.id = id;
 	}
+<<<<<<< HEAD
 	
 	public String getUbicacion() {
 		return ubicacion;
@@ -69,6 +95,23 @@ public class DisponibilidadDTO {
 
 	public void setMedicodto(MedicoDTO medicodto) {
 		this.medicodto = medicodto;
+=======
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	}
 
 	public Long getIdMedico() {
@@ -79,6 +122,7 @@ public class DisponibilidadDTO {
 		this.idMedico = idMedico;
 	}
 
+<<<<<<< HEAD
 	public String getEspdto() {
 		return espdto;
 	}
@@ -95,4 +139,13 @@ public class DisponibilidadDTO {
 		this.areaEspecialidad = areaEspecialidad;
 	}
 	
+=======
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

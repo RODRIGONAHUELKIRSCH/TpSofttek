@@ -12,7 +12,11 @@ public class EspecialidadMapper {
             return null;
         }
         return new EspecialidadDTO(
+<<<<<<< HEAD
                 
+=======
+                especialidad.id,
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
                 especialidad.getArea_especialidad()
         );
     }
