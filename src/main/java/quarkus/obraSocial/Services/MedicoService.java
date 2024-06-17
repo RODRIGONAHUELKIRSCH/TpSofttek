@@ -97,8 +97,13 @@ public class MedicoService {
     }
     
     @Transactional
+<<<<<<< HEAD
     public MedicoDTO obtenerMedicoDTOPorId(Medico medic) {
         Medico medico = medicoRepository.findById(medic.id);
+=======
+    public MedicoDTO obtenerMedicoDTOPorId(Long id) {
+        Medico medico = medicoRepository.findById(id);
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
         if (medico != null) {
             return medicoMapper.convertirDto(medico);
         } else {

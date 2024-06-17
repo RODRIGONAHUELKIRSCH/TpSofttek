@@ -6,12 +6,16 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+<<<<<<< HEAD
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Disponibilidad")
+<<<<<<< HEAD
 public class Disponibilidad extends PanacheEntity  {
 
 	
@@ -28,6 +32,47 @@ public class Disponibilidad extends PanacheEntity  {
 	private String ubicacion;
 
 	// Getters y setters
+=======
+public class Disponibilidad extends PanacheEntity {
+
+	@Column(name = "medico_id", nullable = false)
+	private Long medicoId;
+
+	@Column(name = "fecha", nullable = false)
+	private String fecha;
+
+	@Column(name = "hora", nullable = false)
+	private String hora;
+
+	@Column(name = "ubicacion", nullable = false)
+	private String ubicacion;
+
+	// Getters y setters
+
+	public Long getMedicoId() {
+		return medicoId;
+	}
+
+	public void setMedicoId(Long medicoId) {
+		this.medicoId = medicoId;
+	}
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 	public String getUbicacion() {
 		return ubicacion;
@@ -36,6 +81,7 @@ public class Disponibilidad extends PanacheEntity  {
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
+<<<<<<< HEAD
 	
 	public List<String> getHorarios_consulta() {
 		return horarios_consulta;
@@ -53,4 +99,6 @@ public class Disponibilidad extends PanacheEntity  {
 		this.med = med;
 	}
 
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

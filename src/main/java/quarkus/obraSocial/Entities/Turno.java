@@ -1,6 +1,7 @@
 package quarkus.obraSocial.Entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+<<<<<<< HEAD
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,11 +10,23 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+=======
+import io.smallrye.common.constraint.NotNull;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import quarkus.obraSocial.Enums.EstadoTurno;
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 @Entity
 @Table(name = "Turno")
 public class Turno extends PanacheEntity {
     
+<<<<<<< HEAD
     @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
     private Disponibilidad disponibilidad;
     
@@ -81,4 +94,22 @@ public class Turno extends PanacheEntity {
 		this.idmedico = idmedico;
 	}
 	
+=======
+    @ManyToOne
+    @JoinColumn(name = "disponibilidad_id", nullable = false)
+    private Disponibilidad disponibilidad;
+    
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado", nullable = false)
+    private EstadoTurno estado;
+
+    @Column(name = "motivo")
+    private String motivo;
+
+    @Column(name = "paciente")
+    private String paciente;
+
+    
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

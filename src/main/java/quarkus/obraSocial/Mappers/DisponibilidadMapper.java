@@ -1,13 +1,23 @@
 package quarkus.obraSocial.Mappers;
 
 import jakarta.enterprise.context.ApplicationScoped;
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
+=======
+import jakarta.inject.Inject;
+import quarkus.obraSocial.Dtos.DisponibilidadDTO;
+import quarkus.obraSocial.Dtos.MedicoDTO;
+import quarkus.obraSocial.Entities.Disponibilidad;
+import quarkus.obraSocial.Entities.Medico;
+import quarkus.obraSocial.Services.MedicoService;
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 @ApplicationScoped
 public class DisponibilidadMapper {
 
+<<<<<<< HEAD
 
 
 	public DisponibilidadDTO disponibilidadADto(Disponibilidad disponibilidad) {
@@ -17,11 +27,28 @@ public class DisponibilidadMapper {
 		//dto.setEspdto(disponibilidad.getMed().getEspecialidad().getArea_especialidad());
 		dto.setUbicacion(disponibilidad.getUbicacion());
 		dto.setHorariosConsulta(disponibilidad.getHorarios_consulta());
+=======
+	@Inject
+	MedicoMapper medicoMapper;
+
+	@Inject
+	MedicoService medicoService;
+
+	public DisponibilidadDTO disponibilidadADto(Disponibilidad disponibilidad) {
+		DisponibilidadDTO dto = new DisponibilidadDTO();
+		dto.setId(disponibilidad.id);
+		dto.setIdMedico(disponibilidad.getMedicoId());
+		dto.setFecha(disponibilidad.getFecha());
+		dto.setHora(disponibilidad.getHora());
+		dto.setUbicacion(disponibilidad.getUbicacion());
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 		return dto;
 	}
 
 	public Disponibilidad dtoADisponibilidad(DisponibilidadDTO dto) {
 		Disponibilidad disponibilidad = new Disponibilidad();
+<<<<<<< HEAD
 
 		disponibilidad.setUbicacion(dto.getUbicacion());
 		disponibilidad.setHorarios_consulta(dto.getHorariosConsulta());
@@ -36,5 +63,18 @@ public class DisponibilidadMapper {
 		dto.setUbicacion(disp.getUbicacion());
 		dto.setHorariosConsulta(disp.getHorarios_consulta());
 		return dto;
+=======
+		MedicoDTO medicoDTO = obtenerMedicoDTO(dto.getIdMedico()); // Obtener el MedicoDTO del ID proporcionado
+		disponibilidad.setMedicoId(dto.getIdMedico()); // Convertir MedicoDTO a Medico
+		disponibilidad.setFecha(dto.getFecha());
+		disponibilidad.setHora(dto.getHora());
+		disponibilidad.setUbicacion(dto.getUbicacion());
+		return disponibilidad;
+	}
+
+	private MedicoDTO obtenerMedicoDTO(Long medicoId) {
+		// Lógica para obtener el MedicoDTO a partir del ID
+		return medicoService.obtenerMedicoDTOPorId(medicoId);
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	}
 }
