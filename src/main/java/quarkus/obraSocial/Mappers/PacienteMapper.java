@@ -22,6 +22,11 @@ public class PacienteMapper {
 		dtopaciente.setNombre(paciente.getNombre());
 		dtopaciente.setApellido(paciente.getApellido());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		dtopaciente.setEmail(paciente.getEmail());
+		dtopaciente.setPassword(paciente.getPassword());
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 		dtopaciente.setEmail(paciente.getEmail());
 		dtopaciente.setPassword(paciente.getPassword());

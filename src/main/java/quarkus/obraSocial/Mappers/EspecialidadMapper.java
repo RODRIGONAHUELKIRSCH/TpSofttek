@@ -13,7 +13,11 @@ public class EspecialidadMapper {
         }
         return new EspecialidadDTO(
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
+=======
+                especialidad.id,
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
                 especialidad.id,
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de

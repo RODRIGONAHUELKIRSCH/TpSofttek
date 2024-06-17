@@ -1,9 +1,14 @@
 package quarkus.obraSocial.Dtos;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+=======
+import quarkus.obraSocial.Enums.EstadoTurno;
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 import quarkus.obraSocial.Enums.EstadoTurno;
 
@@ -14,6 +19,7 @@ public class TurnoDTO {
     
     private Long disponibilidadId;
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     private String estado;
     
@@ -37,11 +43,16 @@ public class TurnoDTO {
     	this.fecha_hora=fecha_hora;
     }
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
     private EstadoTurno estado;
     
     private String motivo;
     
     private String paciente;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 	public Long getId() {
@@ -61,17 +72,23 @@ public class TurnoDTO {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public String getEstado() {
 		return estado;
 	}
 
 	public void setEstado(String estado) {
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	public EstadoTurno getEstado() {
 		return estado;
 	}
 
 	public void setEstado(EstadoTurno estado) {
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 		this.estado = estado;
 	}
@@ -84,6 +101,7 @@ public class TurnoDTO {
 		this.motivo = motivo;
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public PacienteDTO getPacientedto() {
 		return pacientedto;
@@ -126,6 +144,8 @@ public class TurnoDTO {
 	}
 		
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	public String getPaciente() {
 		return paciente;
 	}
@@ -135,5 +155,8 @@ public class TurnoDTO {
 	}
 
     
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 }

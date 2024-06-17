@@ -2,21 +2,28 @@ package quarkus.obraSocial.Mappers;
 
 import jakarta.enterprise.context.ApplicationScoped;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 import jakarta.inject.Inject;
 import quarkus.obraSocial.Dtos.DisponibilidadDTO;
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Disponibilidad;
 import quarkus.obraSocial.Entities.Medico;
 import quarkus.obraSocial.Services.MedicoService;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 @ApplicationScoped
 public class DisponibilidadMapper {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -28,6 +35,8 @@ public class DisponibilidadMapper {
 		dto.setUbicacion(disponibilidad.getUbicacion());
 		dto.setHorariosConsulta(disponibilidad.getHorarios_consulta());
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	@Inject
 	MedicoMapper medicoMapper;
 
@@ -42,12 +51,16 @@ public class DisponibilidadMapper {
 		dto.setHora(disponibilidad.getHora());
 		dto.setUbicacion(disponibilidad.getUbicacion());
 
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 		return dto;
 	}
 
 	public Disponibilidad dtoADisponibilidad(DisponibilidadDTO dto) {
 		Disponibilidad disponibilidad = new Disponibilidad();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 		disponibilidad.setUbicacion(dto.getUbicacion());
@@ -64,6 +77,8 @@ public class DisponibilidadMapper {
 		dto.setHorariosConsulta(disp.getHorarios_consulta());
 		return dto;
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 		MedicoDTO medicoDTO = obtenerMedicoDTO(dto.getIdMedico()); // Obtener el MedicoDTO del ID proporcionado
 		disponibilidad.setMedicoId(dto.getIdMedico()); // Convertir MedicoDTO a Medico
 		disponibilidad.setFecha(dto.getFecha());
@@ -75,6 +90,9 @@ public class DisponibilidadMapper {
 	private MedicoDTO obtenerMedicoDTO(Long medicoId) {
 		// Lógica para obtener el MedicoDTO a partir del ID
 		return medicoService.obtenerMedicoDTOPorId(medicoId);
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	}
 }

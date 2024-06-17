@@ -15,6 +15,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.ForeignKey;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 @Entity
@@ -23,21 +26,31 @@ public class Medico extends PanacheEntity {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     @ManyToOne(targetEntity=Especialidad.class,fetch=FetchType.LAZY)
     private Especialidad especialidad;
     
 =======
+=======
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 	
     @ManyToOne
     @JoinColumn(name = "id_especialidad", nullable = false)
     private Especialidad especialidad;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 	@Column(name="nombre",nullable=false)
 	private String nombre;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@Column(name="apellido",unique=true,nullable=false)
+=======
+	@Column(name="apellido",nullable=false)
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 	@Column(name="apellido",nullable=false)
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
@@ -47,7 +60,11 @@ public class Medico extends PanacheEntity {
 	private String email;
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@Column(name="password",nullable=false)
+=======
+	@Column(name="password",unique=true,nullable=false)
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 	@Column(name="password",unique=true,nullable=false)
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de

@@ -12,6 +12,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+<<<<<<< HEAD
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 
 @Entity
@@ -19,6 +22,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Especialidad extends PanacheEntity{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
