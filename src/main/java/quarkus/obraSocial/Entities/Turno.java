@@ -1,6 +1,8 @@
 package quarkus.obraSocial.Entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,24 +14,31 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Turno")
+@ApiModel(value="Turno",description="creacion tabla turno")
 public class Turno extends PanacheEntity {
-    
+	
+	@ApiModelProperty(notes="disponibilidad del turno")
     @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
     private Disponibilidad disponibilidad;
     
+	@ApiModelProperty(notes="estado del turno")
     @Column(name="estado_turno")
     private String estado;
 
+	@ApiModelProperty(notes="motivo del turno")
     @Column(name = "motivo")
     private String motivo;
 
+	@ApiModelProperty(notes="paciente que reserva turnos")
     @OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id_paciente",referencedColumnName="id")
     private Paciente paciente;
 
+	@ApiModelProperty(notes="fecha y hora del turno")
     @Column(name="fecha_hora")
     private String fecha_hora;
     
+	@ApiModelProperty(notes="id del medico")
     @Column(name="idmedico")
     private Long idmedico;
 
