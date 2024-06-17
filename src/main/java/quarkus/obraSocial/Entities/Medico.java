@@ -1,6 +1,8 @@
 package quarkus.obraSocial.Entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -9,25 +11,30 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Medico")
+@ApiModel(value="Medico",description="Creacion tabla medico")
 public class Medico extends PanacheEntity {
 
-
+	@ApiModelProperty(notes="especialidad del medico")
     @ManyToOne(targetEntity=Especialidad.class,fetch=FetchType.LAZY)
     private Especialidad especialidad;
     
-
+	@ApiModelProperty(notes="nombre del medico")
 	@Column(name="nombre",nullable=false)
 	private String nombre;
 
+	@ApiModelProperty(notes="apellido del medico")
 	@Column(name="apellido",unique=true,nullable=false)
 	private String apellido;
 	
+	@ApiModelProperty(notes="email del medico")
 	@Column(name="email",unique=true,nullable=false)
 	private String email;
 	
+	@ApiModelProperty
 	@Column(name="password",nullable=false)
 	private String password;
 	
+	@ApiModelProperty
 	@Column(name="foto",unique=true,nullable=false)
 	private String foto;
 	

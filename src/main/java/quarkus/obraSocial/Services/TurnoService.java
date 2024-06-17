@@ -35,7 +35,7 @@ public class TurnoService {
     public TurnoDTO agregarTurno(TurnoDTO turnodto) {
         Turno turno = TurnoMapper.dtoaturno(turnodto);
   	  Disponibilidad disp = disponibilidadRepository.findById(turnodto.getDisponibilidadId());
-  	  Paciente paciente= pacienteRepository.findById(turnodto.getPacienteid());
+  	  Paciente paciente=pacienteRepository.findById(turnodto.getPacienteid());
        if (disp == null) {
            throw new IllegalArgumentException("Especialidad no encontrada con el id: " + turno.getDisponibilidad().id);
        }
@@ -49,7 +49,7 @@ public class TurnoService {
         List<Turno> turnos = TurnoRepository.listAll();
         return turnos.stream().map(TurnoMapper::turnoDTO).collect(Collectors.toList());
     }
-    
+	
     @Transactional
     public TurnoDTO updateturno(Long id, TurnoDTO turnodto) {
         Turno turno = TurnoRepository.findById(id);
@@ -64,7 +64,7 @@ public class TurnoService {
     @Transactional
     public void deleteturno(Long id) {
         Turno turno = TurnoRepository.findById(id);
+
         TurnoRepository.delete(turno);
     }
-	
 }
