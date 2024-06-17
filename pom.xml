@@ -68,32 +68,25 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-resteasy-jackson</artifactId>
 		</dependency>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.13.3</version>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-smallrye-openapi</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.13.3</version>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-swagger-ui</artifactId>
 		</dependency>
-
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+	<dependency>
+    <groupId>io.swagger</groupId>
+    <artifactId>swagger-annotations</artifactId>
+    <version>1.6.14</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		
     </dependencies>
 
     <build>

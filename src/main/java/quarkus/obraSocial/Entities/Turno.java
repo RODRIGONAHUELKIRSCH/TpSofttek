@@ -1,10 +1,8 @@
 package quarkus.obraSocial.Entities;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,66 +11,34 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-=======
-import io.smallrye.common.constraint.NotNull;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-=======
-import io.smallrye.common.constraint.NotNull;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-import io.smallrye.common.constraint.NotNull;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
-import io.smallrye.common.constraint.NotNull;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import quarkus.obraSocial.Enums.EstadoTurno;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 @Entity
 @Table(name = "Turno")
+@ApiModel(value="Turno",description="creacion tabla turno")
 public class Turno extends PanacheEntity {
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+	
+	@ApiModelProperty(notes="disponibilidad del turno")
     @ManyToOne(targetEntity=Disponibilidad.class,fetch=FetchType.LAZY)
     private Disponibilidad disponibilidad;
     
+	@ApiModelProperty(notes="estado del turno")
     @Column(name="estado_turno")
     private String estado;
 
+	@ApiModelProperty(notes="motivo del turno")
     @Column(name = "motivo")
     private String motivo;
 
+	@ApiModelProperty(notes="paciente que reserva turnos")
     @OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id_paciente",referencedColumnName="id")
     private Paciente paciente;
 
+	@ApiModelProperty(notes="fecha y hora del turno")
     @Column(name="fecha_hora")
     private String fecha_hora;
     
+	@ApiModelProperty(notes="id del medico")
     @Column(name="idmedico")
     private Long idmedico;
 
@@ -124,73 +90,4 @@ public class Turno extends PanacheEntity {
 		this.idmedico = idmedico;
 	}
 	
-=======
-    @ManyToOne
-    @JoinColumn(name = "disponibilidad_id", nullable = false)
-    private Disponibilidad disponibilidad;
-    
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
-    private EstadoTurno estado;
-
-    @Column(name = "motivo")
-    private String motivo;
-
-=======
-    @ManyToOne
-    @JoinColumn(name = "disponibilidad_id", nullable = false)
-    private Disponibilidad disponibilidad;
-    
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
-    private EstadoTurno estado;
-
-    @Column(name = "motivo")
-    private String motivo;
-
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-    @ManyToOne
-    @JoinColumn(name = "disponibilidad_id", nullable = false)
-    private Disponibilidad disponibilidad;
-    
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
-    private EstadoTurno estado;
-
-    @Column(name = "motivo")
-    private String motivo;
-
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
-    @ManyToOne
-    @JoinColumn(name = "disponibilidad_id", nullable = false)
-    private Disponibilidad disponibilidad;
-    
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "estado", nullable = false)
-    private EstadoTurno estado;
-
-    @Column(name = "motivo")
-    private String motivo;
-
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-    @Column(name = "paciente")
-    private String paciente;
-
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 }

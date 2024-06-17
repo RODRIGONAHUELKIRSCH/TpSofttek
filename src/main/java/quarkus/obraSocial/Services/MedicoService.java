@@ -97,28 +97,8 @@ public class MedicoService {
     }
     
     @Transactional
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public MedicoDTO obtenerMedicoDTOPorId(Medico medic) {
         Medico medico = medicoRepository.findById(medic.id);
-=======
-    public MedicoDTO obtenerMedicoDTOPorId(Long id) {
-        Medico medico = medicoRepository.findById(id);
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-    public MedicoDTO obtenerMedicoDTOPorId(Long id) {
-        Medico medico = medicoRepository.findById(id);
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-    public MedicoDTO obtenerMedicoDTOPorId(Long id) {
-        Medico medico = medicoRepository.findById(id);
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
-    public MedicoDTO obtenerMedicoDTOPorId(Long id) {
-        Medico medico = medicoRepository.findById(id);
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
         if (medico != null) {
             return medicoMapper.convertirDto(medico);
         } else {
