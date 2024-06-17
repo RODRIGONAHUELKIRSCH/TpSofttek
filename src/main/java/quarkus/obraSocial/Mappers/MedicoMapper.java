@@ -4,12 +4,15 @@ import jakarta.enterprise.context.ApplicationScoped;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import quarkus.obraSocial.Dtos.EspecialidadDTO;
 import quarkus.obraSocial.Dtos.MedicoDTO;
 import quarkus.obraSocial.Entities.Medico;
 =======
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import jakarta.inject.Inject;
@@ -20,9 +23,12 @@ import quarkus.obraSocial.Entities.Medico;
 import quarkus.obraSocial.Repositories.EspecialidadRepository;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
@@ -51,6 +57,7 @@ public class MedicoMapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         MedicoDTO medicoDTO = new MedicoDTO(); 
         medicoDTO.setNombre(medico.getNombre());
         medicoDTO.setApellido(medico.getApellido());
@@ -61,6 +68,8 @@ public class MedicoMapper {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
         MedicoDTO medicoDTO = new MedicoDTO();
         medicoDTO.setIdMedico(medico.id);
         medicoDTO.setNombre(medico.getNombre());
@@ -69,9 +78,12 @@ public class MedicoMapper {
         medicoDTO.setEspecialidadDto(new EspecialidadDTO(medico.getEspecialidad().id, medico.getEspecialidad().getArea_especialidad()));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
         

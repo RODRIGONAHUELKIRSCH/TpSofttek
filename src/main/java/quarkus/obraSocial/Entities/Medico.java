@@ -17,9 +17,12 @@ import jakarta.persistence.Table;
 import jakarta.persistence.ForeignKey;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
@@ -31,6 +34,7 @@ public class Medico extends PanacheEntity {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @ManyToOne(targetEntity=Especialidad.class,fetch=FetchType.LAZY)
     private Especialidad especialidad;
     
@@ -39,10 +43,13 @@ public class Medico extends PanacheEntity {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	
     @ManyToOne
     @JoinColumn(name = "id_especialidad", nullable = false)
     private Especialidad especialidad;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
@@ -50,10 +57,13 @@ public class Medico extends PanacheEntity {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 	@Column(name="nombre",nullable=false)
 	private String nombre;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,11 +77,15 @@ public class Medico extends PanacheEntity {
 =======
 	@Column(name="apellido",nullable=false)
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+	@Column(name="apellido",nullable=false)
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	private String apellido;
 	
 	@Column(name="email",unique=true,nullable=false)
 	private String email;
 	
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +96,9 @@ public class Medico extends PanacheEntity {
 =======
 	@Column(name="password",unique=true,nullable=false)
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+	@Column(name="password",unique=true,nullable=false)
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 	@Column(name="password",unique=true,nullable=false)
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f

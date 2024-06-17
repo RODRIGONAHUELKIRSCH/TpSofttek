@@ -3,6 +3,7 @@ package quarkus.obraSocial.Dtos;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -47,6 +48,8 @@ public class DisponibilidadDTO {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -71,9 +74,12 @@ public class DisponibilidadDTO {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	public Long getId() {
@@ -83,6 +89,7 @@ public class DisponibilidadDTO {
 	public void setId(Long id) {
 		this.id = id;
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +121,8 @@ public class DisponibilidadDTO {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 	public String getFecha() {
 		return fecha;
@@ -131,9 +140,12 @@ public class DisponibilidadDTO {
 		this.hora = hora;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	}
@@ -146,6 +158,7 @@ public class DisponibilidadDTO {
 		this.idMedico = idMedico;
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +183,8 @@ public class DisponibilidadDTO {
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 	public String getUbicacion() {
 		return ubicacion;
 	}
@@ -179,9 +194,12 @@ public class DisponibilidadDTO {
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
 =======
 >>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
+=======
+>>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 =======
 >>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 }
