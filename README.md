@@ -1,6 +1,4 @@
 ## Datos importantes
-
-- **Rama principal es `develop`**: Tuvimos muchos errores a la hora de hacer merge con Eclipse y por esto, y dado que teníamos tiempo limitado, decidimos dejarlo todo en `develop`.
 - **Endpoints listados**: Los endpoints listados son los que están en el `README`. 
 
 -**Consideraciones al realizar los endpoint si elimina un turno se elimina el paciente asociado a ese turno ademas si quiere eliminar un turno y este tiene una receta asociada a el se debera eliminar la receta primero
