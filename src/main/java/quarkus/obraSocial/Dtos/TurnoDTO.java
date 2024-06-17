@@ -1,38 +1,14 @@
 package quarkus.obraSocial.Dtos;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-=======
-import quarkus.obraSocial.Enums.EstadoTurno;
-
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-import quarkus.obraSocial.Enums.EstadoTurno;
-
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
-import quarkus.obraSocial.Enums.EstadoTurno;
-
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
-import quarkus.obraSocial.Enums.EstadoTurno;
-
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 public class TurnoDTO {
     
     private Long id;
     
     private Long disponibilidadId;
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private String estado;
     
     private String motivo;
@@ -54,28 +30,6 @@ public class TurnoDTO {
     	this.motivo=motivo;
     	this.fecha_hora=fecha_hora;
     }
-=======
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-    private EstadoTurno estado;
-    
-    private String motivo;
-    
-    private String paciente;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 
 	public Long getId() {
 		return id;
@@ -93,37 +47,11 @@ public class TurnoDTO {
 		this.disponibilidadId = disponibilidadId;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public String getEstado() {
 		return estado;
 	}
 
 	public void setEstado(String estado) {
-=======
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-	public EstadoTurno getEstado() {
-		return estado;
-	}
-
-	public void setEstado(EstadoTurno estado) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 		this.estado = estado;
 	}
 
@@ -135,10 +63,6 @@ public class TurnoDTO {
 		this.motivo = motivo;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	public PacienteDTO getPacientedto() {
 		return pacientedto;
 	}
@@ -179,30 +103,4 @@ public class TurnoDTO {
 		this.idmedico = idmedico;
 	}
 		
-=======
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-	public String getPaciente() {
-		return paciente;
-	}
-
-	public void setPaciente(String paciente) {
-		this.paciente = paciente;
-	}
-
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> fb8fa20e4618bb71a99a9b5146b0213b509df2de
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
-=======
->>>>>>> 63df494002b2c44068077cd3659424af1e7a708f
 }

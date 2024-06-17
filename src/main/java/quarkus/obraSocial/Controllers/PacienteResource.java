@@ -1,5 +1,8 @@
 package quarkus.obraSocial.Controllers;
 
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
@@ -18,7 +21,13 @@ public class PacienteResource {
 	@Inject
 	PacienteService pservice;
 	
+	
 	@POST
+	@Operation(summary="Crear un paciente",description="Logica de creado de un paciente")
+	@APIResponses(value={
+		@APIResponse(responseCode="200",description="Paciente creado"),
+		@APIResponse(responseCode="404",description="Not Found")
+})
 	public Response crearPaciente(PacienteDTO dtopaciente) {
 		
 		PacienteDTO createPaciente=pservice.crearPaciente(dtopaciente);

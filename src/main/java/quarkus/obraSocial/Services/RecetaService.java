@@ -45,9 +45,8 @@ public class RecetaService {
     
     public RecetaDTO obtenerreceta(Long id) {
         Receta receta = recetaRepository.findById(id);
+
         return RecetaMapper.recetaDTO(receta);
     }
-    
-
 	
 }

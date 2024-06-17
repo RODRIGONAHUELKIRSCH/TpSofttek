@@ -2,6 +2,11 @@ package quarkus.obraSocial.Controllers;
 
 import jakarta.inject.Inject;
 import java.util.List;
+
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
+
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -26,6 +31,11 @@ public class MedicoResource {
     MedicoService medicoService;
 
     @POST
+	@Operation(summary="Crear un Medico",description="Logica de creado de un medico")
+	@APIResponses(value={
+		@APIResponse(responseCode="200",description="Medico creado"),
+		@APIResponse(responseCode="404",description="Not Found")
+})
     public Response crearMedico(MedicoDTO medicoDTO) {
     	
         MedicoDTO creado = medicoService.crearMedico(medicoDTO);
@@ -33,6 +43,11 @@ public class MedicoResource {
     }
     
     @GET
+	@Operation(summary="Obtener un Medico",description="Logica de obtencion de un medico")
+	@APIResponses(value={
+		@APIResponse(responseCode="200",description="Medico mostrado"),
+		@APIResponse(responseCode="404",description="Not Found")
+})
     public List<MedicoDTO> listarMedicos(){
     	return medicoService.listarMedicos();
     }
