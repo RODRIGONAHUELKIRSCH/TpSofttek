@@ -19,7 +19,7 @@ import jakarta.ws.rs.ApplicationPath;
 			)
 	
 		)
-@ApplicationPath("http://localhost:8080")
+		
 public class SwaggerConfig extends Application {
 
 }
