@@ -24,7 +24,11 @@ public class PacienteService {
 			pacienterepository.persist(paciente);
 			return pacienteMapper.DtoConverter(paciente);
 			
-		
 	}
+	@Transactional
+    public List<PacienteDTO> listarPaciente() {
+        List<Paciente> pacientes = pacienterepository.listAll();
+        return pacientes.stream().map(pacienteMapper::DtoConverter).collect(Collectors.toList());
+    }
 	
 }
